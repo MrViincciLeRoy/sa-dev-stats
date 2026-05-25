@@ -25,7 +25,7 @@ jobs:
       - name: Run scraper and build stats
         env:
           GH_SCRAPER_TOKEN: ${{ secrets.GH_SCRAPER_TOKEN }}
-          MAX_PAGES_PER_RUN: ${{ vars.MAX_PAGES_PER_RUN || '5' }}
+          MAX_PAGES_PER_RUN: ${{ vars.MAX_PAGES_PER_RUN || '25' }}
         run: |
           python scraper.py
           python build_stats.py
