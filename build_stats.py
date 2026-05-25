@@ -57,6 +57,64 @@ def account_age_bucket(created_at):
         return "Unknown"
 
 
+def avg(values):
+    return round(sum(values) / len(values), 1) if values else 0
+
+
+def build_gender_detail(devs):
+    """
+    Build a per-gender stats block. Keys are the raw gender strings found in the data.
+    Each entry contains: count, pct, top_languages, province_breakdown,
+    account_age_breakdown, averages (followers, public_repos, following).
+    """
+    total = len(devs)
+    if not total:
+        return {}
+
+    # Collect all unique gender values present in data
+    all_genders = sorted(set(d.get("gender") or "unknown" for d in devs))
+
+    result = {}
+    for g in all_genders:
+        group = [d for d in devs if (d.get("gender") or "unknown") == g]
+        n = len(group)
+
+        lang_counter = Counter()
+        for d in group:
+            for lang, cnt in (d.get("languages") or {}).items():
+                lang_counter[lang] += cnt
+
+        province_counter = Counter(infer_province(d.get("location")) for d in group)
+        age_counter = Counter(account_age_bucket(d.get("created_at")) for d in group)
+
+        age_order = ["< 1 year", "1–3 years", "3–6 years", "6–10 years", "10+ years", "Unknown"]
+
+        result[g] = {
+            "count": n,
+            "pct": round((n / total) * 100, 1),
+            "averages": {
+                "followers": avg([d.get("followers", 0) for d in group]),
+                "public_repos": avg([d.get("public_repos", 0) for d in group]),
+                "following": avg([d.get("following", 0) for d in group]),
+            },
+            "top_languages": [
+                {"language": lang, "count": cnt}
+                for lang, cnt in lang_counter.most_common(10)
+            ],
+            "province_breakdown": [
+                {"province": p, "count": c}
+                for p, c in sorted(province_counter.items(), key=lambda x: -x[1])
+            ],
+            "account_age_breakdown": [
+                {"range": bucket, "count": age_counter.get(bucket, 0)}
+                for bucket in age_order
+                if age_counter.get(bucket, 0) > 0
+            ],
+        }
+
+    return result
+
+
 def build_stats():
     if not DEVELOPERS_FILE.exists():
         logger.warning("developers.json not found — nothing to build from.")
@@ -88,6 +146,7 @@ def build_stats():
             all_langs[lang] += count
     top_languages = [{"language": lang, "count": cnt} for lang, cnt in all_langs.most_common(15)]
 
+    # Legacy field kept for backward compat — now superseded by gender_detail
     female_langs = Counter()
     for d in devs:
         if d.get("gender") == "female":
@@ -113,6 +172,7 @@ def build_stats():
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "total_developers": total,
         "gender": gender_stats,
+        "gender_detail": build_gender_detail(devs),
         "top_languages": top_languages,
         "top_female_languages": top_female_languages,
         "province_breakdown": province_breakdown,
