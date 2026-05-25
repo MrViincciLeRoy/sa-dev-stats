@@ -145,6 +145,8 @@ def run_scrape(max_pages=None):
     if max_pages is None:
         max_pages = int(os.getenv("MAX_PAGES_PER_RUN", 5))
 
+    deadline = time.time() + 3540  # 59 minutes — leaves 1 min buffer before GH kills the job
+
     progress = load_json(PROGRESS_FILE, {"last_page": 0, "seen_logins": []})
     developers = load_json(DEVELOPERS_FILE, [])
 
@@ -154,6 +156,10 @@ def run_scrape(max_pages=None):
     logger.info(f"Starting scrape from page {start_page}. {len(developers)} devs already stored.")
 
     for page in range(start_page, start_page + max_pages):
+        if time.time() > deadline:
+            logger.info("59-minute time limit reached — saving progress and stopping.")
+            break
+
         if not remaining_ok():
             logger.warning("Rate limit too low — stopping early.")
             break
@@ -171,6 +177,12 @@ def run_scrape(max_pages=None):
             break
 
         for item in items:
+            if time.time() > deadline:
+                logger.info("59-minute time limit reached mid-page — saving progress and stopping.")
+                save_json(PROGRESS_FILE, progress)
+                save_json(DEVELOPERS_FILE, developers)
+                return developers
+
             login = item["login"]
             if login in seen:
                 continue
