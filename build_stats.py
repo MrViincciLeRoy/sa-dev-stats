@@ -1,10 +1,13 @@
 import json
 import logging
-import re
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(name)s — %(message)s",
+)
 logger = logging.getLogger("build_stats")
 
 DATA_DIR = Path("data")
@@ -68,8 +71,8 @@ def build_stats():
 
     total = len(devs)
 
-    # Gender
     gender_counts = Counter(d.get("gender", "unknown") for d in devs)
+
     def pct(n):
         return round((n / total) * 100, 1) if total else 0
 
@@ -79,14 +82,12 @@ def build_stats():
         "unknown": {"count": gender_counts.get("unknown", 0), "pct": pct(gender_counts.get("unknown", 0))},
     }
 
-    # Top 15 languages overall
     all_langs = Counter()
     for d in devs:
         for lang, count in (d.get("languages") or {}).items():
             all_langs[lang] += count
     top_languages = [{"language": lang, "count": cnt} for lang, cnt in all_langs.most_common(15)]
 
-    # Top languages — female devs
     female_langs = Counter()
     for d in devs:
         if d.get("gender") == "female":
@@ -94,14 +95,12 @@ def build_stats():
                 female_langs[lang] += count
     top_female_languages = [{"language": lang, "count": cnt} for lang, cnt in female_langs.most_common(10)]
 
-    # Province breakdown
     province_counts = Counter(infer_province(d.get("location")) for d in devs)
     province_breakdown = [
         {"province": p, "count": c}
         for p, c in sorted(province_counts.items(), key=lambda x: -x[1])
     ]
 
-    # Account age
     age_counts = Counter(account_age_bucket(d.get("created_at")) for d in devs)
     age_order = ["< 1 year", "1–3 years", "3–6 years", "6–10 years", "10+ years", "Unknown"]
     account_age_breakdown = [
@@ -109,10 +108,6 @@ def build_stats():
         for bucket in age_order
         if age_counts.get(bucket, 0) > 0
     ]
-
-    # Averages
-    avg_followers = round(sum(d.get("followers", 0) for d in devs) / total, 1)
-    avg_repos = round(sum(d.get("public_repos", 0) for d in devs) / total, 1)
 
     stats = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -123,8 +118,8 @@ def build_stats():
         "province_breakdown": province_breakdown,
         "account_age_breakdown": account_age_breakdown,
         "averages": {
-            "followers": avg_followers,
-            "public_repos": avg_repos,
+            "followers": round(sum(d.get("followers", 0) for d in devs) / total, 1),
+            "public_repos": round(sum(d.get("public_repos", 0) for d in devs) / total, 1),
         },
     }
 
@@ -137,5 +132,4 @@ def build_stats():
 
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] — %(message)s")
     build_stats()
