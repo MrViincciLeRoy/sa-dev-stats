@@ -1,0 +1,2528 @@
+[
+  {
+    "login": "paulmwatson",
+    "name": "Paul Watson",
+    "location": "Cape Town, South Africa",
+    "bio": "[Web Developer, CTO@SocioLocal.io, Formerly: [@OpenUpSA.org.za, @CaliberAI, @WeAreKinzen, @Storyful], Learning to code since 1993, South Africa]",
+    "public_repos": 131,
+    "followers": 124,
+    "following": 154,
+    "created_at": "2008-04-02T21:00:33Z",
+    "languages": {
+      "TypeScript": 7,
+      "HTML": 4,
+      "EJS": 1,
+      "JavaScript": 4,
+      "Ruby": 3,
+      "Dockerfile": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:22:57.596183+00:00"
+  },
+  {
+    "login": "benganl",
+    "name": "Lanton Hulisani Vhengani",
+    "location": "Johanessburg, South Africa",
+    "bio": "Developer based in Johannesburg, South Africa. Java is my language of choice, though I can do a bit of PHP and Javascript.",
+    "public_repos": 1,
+    "followers": 35,
+    "following": 24,
+    "created_at": "2008-10-09T09:38:24Z",
+    "languages": {
+      "Java": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:22:58.440355+00:00"
+  },
+  {
+    "login": "jbrownbridge",
+    "name": "Jason Brownbridge",
+    "location": "South Africa",
+    "bio": "South African, Geek, VPE at Beekeeper",
+    "public_repos": 52,
+    "followers": 21,
+    "following": 3,
+    "created_at": "2009-09-15T14:56:22Z",
+    "languages": {
+      "Ruby": 2,
+      "Python": 9,
+      "C#": 2,
+      "JavaScript": 5,
+      "HTML": 1,
+      "Scala": 1,
+      "Perl": 1,
+      "C": 3,
+      "Puppet": 1,
+      "C++": 1,
+      "Java": 1,
+      "VimL": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:22:59.458950+00:00"
+  },
+  {
+    "login": "keegancsmith",
+    "name": "Keegan Carruthers-Smith",
+    "location": "Cape Town, South Africa",
+    "bio": "South African working for @sourcegraph. Did stints in Bay Area and London for @facebook.",
+    "public_repos": 104,
+    "followers": 329,
+    "following": 62,
+    "created_at": "2010-01-22T17:49:51Z",
+    "languages": {
+      "Nix": 1,
+      "Starlark": 1,
+      "Emacs Lisp": 3,
+      "Haskell": 1,
+      "JavaScript": 3,
+      "C++": 1,
+      "Go": 9,
+      "Python": 2,
+      "Erlang": 1,
+      "Zig": 2
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:00.461015+00:00"
+  },
+  {
+    "login": "geahaad",
+    "name": "Gerhard Dinhof",
+    "location": "South Africa",
+    "bio": "Techie by \ud83d\udc9a | CTO at Spryr Ltd | Senior Architect and Blockchain Practice Lead at IBM South Africa | Teaching at UAS Technikum Wien",
+    "public_repos": 17,
+    "followers": 35,
+    "following": 9,
+    "created_at": "2010-03-28T09:04:13Z",
+    "languages": {
+      "Ruby": 1,
+      "Swift": 1,
+      "JavaScript": 3,
+      "Go": 1,
+      "C#": 1,
+      "Java": 1,
+      "Shell": 1,
+      "CSS": 2
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:01.445974+00:00"
+  },
+  {
+    "login": "MarkDerman",
+    "name": "Mark Derman",
+    "location": "Cape Town, South Africa",
+    "bio": "Software architect and developer from Cape Town, South Africa. Owner at @SoulvSoftware ",
+    "public_repos": 3,
+    "followers": 6,
+    "following": 2,
+    "created_at": "2011-04-22T18:27:17Z",
+    "languages": {
+      "C#": 3
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:02.308457+00:00"
+  },
+  {
+    "login": "pjpdev",
+    "name": "PJ Pretorius",
+    "location": "South Africa",
+    "bio": "Java Developer from South Africa",
+    "public_repos": 4,
+    "followers": 5,
+    "following": 1,
+    "created_at": "2011-04-28T20:20:51Z",
+    "languages": {
+      "C++": 1,
+      "Java": 3
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:03.206245+00:00"
+  },
+  {
+    "login": "dthompsonza",
+    "name": "Dave Thompson",
+    "location": "Cape Town, South Africa",
+    "bio": "C# developer working in Cape Town, South Africa.\r\nNot available for recruiters.",
+    "public_repos": 22,
+    "followers": 23,
+    "following": 14,
+    "created_at": "2011-05-05T07:29:33Z",
+    "languages": {
+      "HTML": 6,
+      "C#": 7,
+      "Visual Basic": 1,
+      "Vue": 1,
+      "PHP": 1,
+      "JavaScript": 2
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:04.256661+00:00"
+  },
+  {
+    "login": "coinsleuth",
+    "name": "Tsoloane Moahloli",
+    "location": "Johannesburg, Gauteng, South Africa",
+    "bio": "Crypto currency enthusiast and software developer in South Africa",
+    "public_repos": 22,
+    "followers": 12,
+    "following": 2,
+    "created_at": "2011-06-21T08:14:06Z",
+    "languages": {
+      "Java": 7,
+      "Go": 7,
+      "CSS": 2,
+      "SQLPL": 1,
+      "C": 1,
+      "Python": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:05.195200+00:00"
+  },
+  {
+    "login": "theronic",
+    "name": "Petrus Theron",
+    "location": "Cape Town, South Africa",
+    "bio": "CTO at CloudAfrica. Full-stack entrepreneur. Former CTO of weFix South Africa (@iFix). Clojure enthusiast.",
+    "public_repos": 157,
+    "followers": 129,
+    "following": 205,
+    "created_at": "2011-08-29T11:30:41Z",
+    "languages": {
+      "Clojure": 11,
+      "Java": 1,
+      "JavaScript": 1,
+      "C++": 1,
+      "HTML": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:06.292439+00:00"
+  },
+  {
+    "login": "arthurattwell",
+    "name": "Arthur Attwell",
+    "location": "Cape Town, South Africa",
+    "bio": "Tech, publishing, Africa enthusiast. Co-founder at @electricbookworks, @bookdash and @BettercareHealth\r\n.",
+    "public_repos": 62,
+    "followers": 54,
+    "following": 5,
+    "created_at": "2011-09-15T14:24:03Z",
+    "languages": {
+      "HTML": 8,
+      "SCSS": 5,
+      "JavaScript": 7,
+      "CSS": 6
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:07.379860+00:00"
+  },
+  {
+    "login": "GPainter",
+    "name": "Gerhard Painter",
+    "location": "South Africa",
+    "bio": "Co-owner of Luma Animation based in Johannesburg, South Africa. ",
+    "public_repos": 7,
+    "followers": 1,
+    "following": 0,
+    "created_at": "2012-01-24T13:55:05Z",
+    "languages": {
+      "HTML": 5
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:08.287000+00:00"
+  },
+  {
+    "login": "sorenaalto",
+    "name": "Soren Aalto",
+    "location": "Mtunzini, KZN, South Africa",
+    "bio": "Former SDE in AWS/EC2 control plan services.  \r\nPreviously in ICT leadership at two South African Universities.",
+    "public_repos": 12,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2012-01-27T08:31:58Z",
+    "languages": {
+      "Logos": 1,
+      "Python": 5,
+      "Jupyter Notebook": 1,
+      "PHP": 1,
+      "HTML": 1,
+      "Java": 1,
+      "Ruby": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:09.233578+00:00"
+  },
+  {
+    "login": "flowonyx",
+    "name": "Joel Williams",
+    "location": "Eshowe, South Africa",
+    "bio": "Independent coder in South Africa.",
+    "public_repos": 9,
+    "followers": 14,
+    "following": 0,
+    "created_at": "2012-02-02T19:56:26Z",
+    "languages": {
+      "Go": 4,
+      "CSS": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:10.116434+00:00"
+  },
+  {
+    "login": "dylanjsa",
+    "name": "Dylan Janeke",
+    "location": "South Africa",
+    "bio": "Software Engineer from South Africa, been doing this for the last 18 years, it's been a joyride.",
+    "public_repos": 0,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2012-02-07T13:46:54Z",
+    "languages": {},
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:10.963277+00:00"
+  },
+  {
+    "login": "schalkburger",
+    "name": "Schalk Burger",
+    "location": "Cape Town, South Africa",
+    "bio": "Designer and Front-end Developer from Cape Town, South Africa.",
+    "public_repos": 40,
+    "followers": 105,
+    "following": 86,
+    "created_at": "2012-02-28T13:54:55Z",
+    "languages": {
+      "AutoHotkey": 2,
+      "TypeScript": 3,
+      "HTML": 1,
+      "PHP": 1,
+      "JavaScript": 10,
+      "CSS": 5,
+      "GLSL": 1,
+      "PowerShell": 2,
+      "Squirrel": 1,
+      "HLSL": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:12.058185+00:00"
+  },
+  {
+    "login": "arneschreuder",
+    "name": "Arn\u00e9 Schreuder",
+    "location": "South Africa",
+    "bio": "\ud83d\udca1 Artificial Intelligence \r\n\ud83c\uddff\ud83c\udde6  South African \r\n\ud83d\ude0d  Husband & Dad",
+    "public_repos": 10,
+    "followers": 42,
+    "following": 6,
+    "created_at": "2012-03-12T10:19:34Z",
+    "languages": {
+      "Jupyter Notebook": 1,
+      "Python": 4,
+      "TypeScript": 1,
+      "Shell": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:12.990503+00:00"
+  },
+  {
+    "login": "djoubert",
+    "name": "Deon Joubert",
+    "location": "Pretoria, South Africa",
+    "bio": "I work as an devops and development engineer at Magna Business Consulting in South Africa.",
+    "public_repos": 2,
+    "followers": 1,
+    "following": 2,
+    "created_at": "2012-03-15T12:57:12Z",
+    "languages": {
+      "Shell": 1,
+      "Python": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:13.812265+00:00"
+  },
+  {
+    "login": "JustinMinnaar",
+    "name": "Justin Minnaar",
+    "location": "Benoni, South Africa",
+    "bio": "I am solving problems in Africa for payments and finance, to help people in rural communities safely sell and market online.",
+    "public_repos": 22,
+    "followers": 7,
+    "following": 8,
+    "created_at": "2012-03-16T11:50:34Z",
+    "languages": {
+      "JavaScript": 2,
+      "HTML": 1,
+      "GDScript": 1,
+      "C#": 10,
+      "TypeScript": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:14.787689+00:00"
+  },
+  {
+    "login": "jacobuserasmus",
+    "name": "Jacobus Erasmus",
+    "location": "Pretoria, South Africa",
+    "bio": "Involved in small ISP in South Africa",
+    "public_repos": 4,
+    "followers": 1,
+    "following": 3,
+    "created_at": "2012-04-19T19:41:54Z",
+    "languages": {
+      "C++": 1,
+      "C#": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:15.647061+00:00"
+  },
+  {
+    "login": "ceNobiteElf",
+    "name": "Con Momberg",
+    "location": "Pretoria, South Africa",
+    "bio": "Programmer based in sunny South Africa.",
+    "public_repos": 6,
+    "followers": 5,
+    "following": 2,
+    "created_at": "2012-07-10T14:51:19Z",
+    "languages": {
+      "Dart": 1,
+      "HTML": 1,
+      "Kotlin": 1,
+      "C#": 2
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:16.552743+00:00"
+  },
+  {
+    "login": "khonza",
+    "name": "Kholekile Somagaca",
+    "location": "Cape Town, South Africa",
+    "bio": "Front End Engineer from Cape Town, South Africa. ",
+    "public_repos": 9,
+    "followers": 1,
+    "following": 0,
+    "created_at": "2012-07-12T14:29:37Z",
+    "languages": {
+      "JavaScript": 5,
+      "TypeScript": 1,
+      "CSS": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:17.452765+00:00"
+  },
+  {
+    "login": "zaidk26",
+    "name": "NiftyBit",
+    "location": "South Africa",
+    "bio": "Developer and designer based in Sunny South Africa",
+    "public_repos": 16,
+    "followers": 10,
+    "following": 2,
+    "created_at": "2012-07-26T20:13:11Z",
+    "languages": {
+      "PHP": 6,
+      "Dockerfile": 2,
+      "HTML": 1,
+      "Svelte": 1,
+      "Vue": 1,
+      "C#": 2,
+      "CSS": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:18.415166+00:00"
+  },
+  {
+    "login": "justinsolms",
+    "name": "Justin Solms",
+    "location": "South Africa",
+    "bio": "Director of Sunstrike Captial (Pty) Ltd - South Africa.\r\nFreelance Software Systems Engineer",
+    "public_repos": 11,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2012-10-26T12:28:42Z",
+    "languages": {
+      "Python": 3,
+      "JavaScript": 2,
+      "Jupyter Notebook": 4
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:19.307766+00:00"
+  },
+  {
+    "login": "kpdowns",
+    "name": "Kevin Downs",
+    "location": "Johannesburg, South Africa",
+    "bio": "Hi, my name is Kevin Downs. I'm a software engineer by both trade and passion hailing from the South of Africa.",
+    "public_repos": 9,
+    "followers": 5,
+    "following": 2,
+    "created_at": "2012-11-15T18:53:39Z",
+    "languages": {
+      "C": 1,
+      "Go": 1,
+      "C++": 1,
+      "C#": 2,
+      "Erlang": 1,
+      "CSS": 1,
+      "TeX": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:20.199537+00:00"
+  },
+  {
+    "login": "haemishkyd",
+    "name": "Haemish Kyd",
+    "location": "Johannesburg, South Africa",
+    "bio": "Embedded Software Engineer based in JHB, South Africa. All things related to technology interest me. Programming, Electronics, 3D printing to mention a few.",
+    "public_repos": 31,
+    "followers": 7,
+    "following": 3,
+    "created_at": "2013-01-11T10:40:41Z",
+    "languages": {
+      "C++": 2,
+      "Python": 8,
+      "Vue": 1,
+      "Rust": 1,
+      "Bicep": 1,
+      "Jupyter Notebook": 1,
+      "Shell": 1,
+      "C": 1,
+      "OpenSCAD": 1,
+      "JavaScript": 2,
+      "Java": 3
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:21.293723+00:00"
+  },
+  {
+    "login": "mystus",
+    "name": "Matthew Fritz",
+    "location": "Durban, South Africa",
+    "bio": "Senior Software Engineer | 20+ years PHP/Laravel & SQL Server | Building healthcare procurement systems in South Africa.",
+    "public_repos": 3,
+    "followers": 4,
+    "following": 5,
+    "created_at": "2013-02-04T08:44:14Z",
+    "languages": {
+      "PHP": 2
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:22.186800+00:00"
+  },
+  {
+    "login": "johan-steffens",
+    "name": "Johan Steffens",
+    "location": "South Africa",
+    "bio": "Staff Engineer from Cape Town, South Africa",
+    "public_repos": 11,
+    "followers": 20,
+    "following": 21,
+    "created_at": "2013-03-12T09:44:13Z",
+    "languages": {
+      "Ruby": 1,
+      "Rust": 4,
+      "C#": 2,
+      "Java": 2
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:23.138724+00:00"
+  },
+  {
+    "login": "ProfLebza",
+    "name": "Lebogang",
+    "location": "Centurion, South Africa",
+    "bio": "I am software developer based in South Africa, developing primarily in PHP but with 10 years of experience in C++ and Java.",
+    "public_repos": 12,
+    "followers": 7,
+    "following": 1,
+    "created_at": "2013-03-18T12:08:50Z",
+    "languages": {
+      "PHP": 7
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:24.055327+00:00"
+  },
+  {
+    "login": "mcmatiza",
+    "name": "Crispen Matiza",
+    "location": "South Africa",
+    "bio": "Certified Google Ads Manager @ Web Partner (South Africa. Professional Web Designer for SMMEs",
+    "public_repos": 2,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2013-03-28T11:50:43Z",
+    "languages": {
+      "C++": 1,
+      "PHP": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:24.896590+00:00"
+  },
+  {
+    "login": "dolfvdberg",
+    "name": "Dolf van den Berg",
+    "location": "South Africa",
+    "bio": "\ud83d\udc4b Hi, I\u2019m Dolf Vandenberg\r\n\ud83d\udcbc Business Analyst | \ud83e\udde0 R&D Team Lead | \u2699\ufe0f .NET & Blazor Enthusiast\r\n\ud83c\udf0d Based in South Africa",
+    "public_repos": 2,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2013-04-10T10:34:52Z",
+    "languages": {
+      "JavaScript": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:27.059729+00:00"
+  },
+  {
+    "login": "longhotsummer",
+    "name": "Greg Kempe",
+    "location": "Cape Town, South Africa",
+    "bio": "Open legislation, civic tech. CTO at @laws-africa.",
+    "public_repos": 27,
+    "followers": 126,
+    "following": 0,
+    "created_at": "2013-04-17T07:04:20Z",
+    "languages": {
+      "HTML": 7,
+      "JavaScript": 5,
+      "Python": 4,
+      "Ruby": 2,
+      "PHP": 1,
+      "CSS": 2
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:28.094005+00:00"
+  },
+  {
+    "login": "maxandrezils",
+    "name": "Max-Andre' Zils",
+    "location": "Cape Town, South Africa",
+    "bio": "Hi \ud83d\udc4b, I'm Max-Andre Zils\r\nA passionate QA Engineer and Scrum Master based in Cape Town, South Africa\r\n",
+    "public_repos": 59,
+    "followers": 27,
+    "following": 13,
+    "created_at": "2013-04-24T09:21:10Z",
+    "languages": {
+      "TypeScript": 4,
+      "JavaScript": 11,
+      "Python": 1,
+      "Lua": 1,
+      "CSS": 1,
+      "HTML": 2
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:29.104099+00:00"
+  },
+  {
+    "login": "fluffynuts",
+    "name": "Davyd McColl",
+    "location": "South Africa",
+    "bio": "Polyglot programmer from South Africa. Been programming professionally for around 25 years. Love learning new tech and languages.",
+    "public_repos": 307,
+    "followers": 67,
+    "following": 6,
+    "created_at": "2013-06-11T10:31:48Z",
+    "languages": {
+      "Python": 3,
+      "JavaScript": 4,
+      "TypeScript": 12,
+      "C#": 7,
+      "Shell": 1,
+      "Rust": 1,
+      "CSS": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:30.173519+00:00"
+  },
+  {
+    "login": "EvanKnowles",
+    "name": "Evan Knowles",
+    "location": "South Africa",
+    "bio": "Java(*) developer from South Africa who thinks he's funny. The king of meta. God of procrastination.",
+    "public_repos": 28,
+    "followers": 22,
+    "following": 2,
+    "created_at": "2013-06-30T20:44:36Z",
+    "languages": {
+      "Java": 14,
+      "JavaScript": 4,
+      "HTML": 2,
+      "Rich Text Format": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:31.199690+00:00"
+  },
+  {
+    "login": "Skowt",
+    "name": "Daniel Pietersen",
+    "location": "South Africa",
+    "bio": "\u2692 Software Engineer\r\n\ud83c\udfe0 South Africa (Remote)",
+    "public_repos": 9,
+    "followers": 19,
+    "following": 0,
+    "created_at": "2013-07-07T20:51:13Z",
+    "languages": {
+      "Go": 1,
+      "JavaScript": 3,
+      "Rust": 1,
+      "HTML": 1,
+      "PHP": 1,
+      "Python": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:32.095078+00:00"
+  },
+  {
+    "login": "lloydlopes",
+    "name": "Lloyd Lopes",
+    "location": "South Africa",
+    "bio": "C# Developer in South Africa",
+    "public_repos": 1,
+    "followers": 2,
+    "following": 0,
+    "created_at": "2013-07-09T00:47:01Z",
+    "languages": {
+      "PHP": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:32.914358+00:00"
+  },
+  {
+    "login": "Thqragapc",
+    "name": "Phumudzo Charles Tharaga",
+    "location": "Bloemfontein, South Africa ",
+    "bio": "A Scientist and Lecturer at the University of the Free State in South Africa and Currently studying towards PHD in Agrometeorology. ",
+    "public_repos": 5,
+    "followers": 1,
+    "following": 1,
+    "created_at": "2013-07-10T16:15:49Z",
+    "languages": {
+      "Jupyter Notebook": 1,
+      "Python": 1,
+      "HTML": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:33.805865+00:00"
+  },
+  {
+    "login": "mikemahlatse",
+    "name": "Mahlatse Mike Malete",
+    "location": "South Africa",
+    "bio": "PHP and Python Developer from South Africa.",
+    "public_repos": 16,
+    "followers": 15,
+    "following": 7,
+    "created_at": "2013-08-02T11:08:22Z",
+    "languages": {
+      "PHP": 3,
+      "Python": 7,
+      "JavaScript": 2
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:34.721152+00:00"
+  },
+  {
+    "login": "silingosj",
+    "name": "Silingo, Simphiwe James",
+    "location": "Cape Town, South Africa",
+    "bio": "I am a black male South African. I am a newbie in Github. I would like to volunteer in any XAMP projects, to advance my programming experience in Github. ",
+    "public_repos": 2,
+    "followers": 1,
+    "following": 0,
+    "created_at": "2013-09-13T07:47:14Z",
+    "languages": {},
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:35.534849+00:00"
+  },
+  {
+    "login": "blestab",
+    "name": "Blessed Ndoro",
+    "location": "Durban, South Africa",
+    "bio": "Senior Programmer at MEDITECH, \r\nSolutions Architect for Primary Health in low resourced areas. Love my wife Isobel & son Tyrecea, HealthCare, OpenUK, Africa",
+    "public_repos": 113,
+    "followers": 18,
+    "following": 13,
+    "created_at": "2013-09-16T09:37:51Z",
+    "languages": {
+      "TeX": 1,
+      "R": 1,
+      "TypeScript": 2,
+      "JavaScript": 3,
+      "HTML": 3,
+      "Java": 1,
+      "Vue": 1,
+      "PHP": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:36.596388+00:00"
+  },
+  {
+    "login": "DawievLill",
+    "name": "Dawie van Lill",
+    "location": "Stellenbosch, South Africa",
+    "bio": "Economics lecturer at Stellenbosch University in South Africa. I am interested in computational macroeconomics, Bayesian methods and deep learning.\r\n",
+    "public_repos": 114,
+    "followers": 143,
+    "following": 311,
+    "created_at": "2013-09-22T21:50:23Z",
+    "languages": {
+      "Julia": 7,
+      "HTML": 2,
+      "R": 1,
+      "Jupyter Notebook": 2,
+      "Rich Text Format": 1,
+      "TeX": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:37.666297+00:00"
+  },
+  {
+    "login": "MatteoMilandri",
+    "name": "Matteo Milandri",
+    "location": "Cape Town, South Africa",
+    "bio": "Electronics engineer, Developing the next generation of battery management system in Cape Town, South Africa\r\n",
+    "public_repos": 8,
+    "followers": 7,
+    "following": 3,
+    "created_at": "2013-10-08T11:22:20Z",
+    "languages": {
+      "JavaScript": 1,
+      "C++": 1,
+      "Python": 1,
+      "Arduino": 3,
+      "C": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:38.529575+00:00"
+  },
+  {
+    "login": "adam-muk",
+    "name": "Adam Mukuddem",
+    "location": "Cape Town, South Africa",
+    "bio": "PhD student within the African Robotics Unit at the University of Cape Town.",
+    "public_repos": 6,
+    "followers": 1,
+    "following": 1,
+    "created_at": "2013-10-13T14:28:37Z",
+    "languages": {
+      "MATLAB": 1,
+      "Python": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:39.369773+00:00"
+  },
+  {
+    "login": "webdesignacademy",
+    "name": "Brian Wiltshire",
+    "location": "South Africa",
+    "bio": "Full Stack Developer from South Africa. UI/UX & Graphic Design. Social & Search Marketing. Search Engine Optimisation and all round Web Technology Enthusiast.",
+    "public_repos": 5,
+    "followers": 4,
+    "following": 4,
+    "created_at": "2013-10-21T11:01:30Z",
+    "languages": {
+      "JavaScript": 2
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:40.299690+00:00"
+  },
+  {
+    "login": "Vuyiswamb",
+    "name": "Vuyiswa Maseko",
+    "location": "Pretoria, South Africa",
+    "bio": "Vuyiswa Maseko is a Founder of Vimalsoft , a Software Company based in South Africa. ",
+    "public_repos": 3,
+    "followers": 2,
+    "following": 16,
+    "created_at": "2013-11-08T07:59:29Z",
+    "languages": {
+      "C#": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:41.157428+00:00"
+  },
+  {
+    "login": "Cazs",
+    "name": "Casper Ndlovu",
+    "location": "South Africa",
+    "bio": "I'm a 28 year old tech enthusiast based  in Johannesburg, South Africa. Started coding in 10th grade using Borland Delphi 7. Mainly work with web & mobile apps.",
+    "public_repos": 50,
+    "followers": 6,
+    "following": 2,
+    "created_at": "2013-11-14T14:08:58Z",
+    "languages": {
+      "Java": 12,
+      "TypeScript": 3,
+      "JavaScript": 4,
+      "C#": 3,
+      "C++": 1,
+      "HTML": 3,
+      "Shell": 1,
+      "CSS": 2
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:42.228559+00:00"
+  },
+  {
+    "login": "Sibongumusa",
+    "name": "LFS SOLUTIONS",
+    "location": "South Africa",
+    "bio": "\u201cWe help South Africans get globally certified in IT | LFS SOLUTIONS",
+    "public_repos": 1,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2013-12-06T15:03:59Z",
+    "languages": {},
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:43.057932+00:00"
+  },
+  {
+    "login": "Georgelj",
+    "name": "George",
+    "location": "Johannesburg, South Africa",
+    "bio": "An elderly White South African who loves Africa in general and South Africa in particular. I also love our Creator and Saviour and hate waste and poverty! ",
+    "public_repos": 1,
+    "followers": 1,
+    "following": 0,
+    "created_at": "2013-12-11T09:11:19Z",
+    "languages": {},
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:43.985674+00:00"
+  },
+  {
+    "login": "gcombrinck",
+    "name": "Garth Combrinck",
+    "location": "Somerset west, South Africa",
+    "bio": "Senior QA Automation Engineer - Somerset West, South Africa",
+    "public_repos": 19,
+    "followers": 0,
+    "following": 5,
+    "created_at": "2014-01-23T13:31:14Z",
+    "languages": {
+      "TypeScript": 2,
+      "Scala": 1,
+      "HTML": 3,
+      "JavaScript": 8,
+      "Java": 3
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:45.004711+00:00"
+  },
+  {
+    "login": "OptimusPrimeLogan",
+    "name": "Satheesh Subramanian",
+    "location": "Johannesburg, South Africa",
+    "bio": "Java/AWS Developer in Johannesburg, South Africa",
+    "public_repos": 13,
+    "followers": 11,
+    "following": 22,
+    "created_at": "2014-02-01T16:42:48Z",
+    "languages": {
+      "Java": 8,
+      "Go": 1,
+      "HTML": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:46.129281+00:00"
+  },
+  {
+    "login": "pjwelcome",
+    "name": "Peter-John Welcome",
+    "location": "South Africa",
+    "bio": "P-J, who is based in Johannesburg, South Africa, is a Google Developer Expert in Firebase and a Freelance Senior Mobile Engineer (iOS & Android) ",
+    "public_repos": 67,
+    "followers": 80,
+    "following": 68,
+    "created_at": "2014-02-05T09:20:21Z",
+    "languages": {
+      "Kotlin": 9,
+      "Java": 7,
+      "C#": 1,
+      "Swift": 7,
+      "Ruby": 2,
+      "Objective-C": 2
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:47.625450+00:00"
+  },
+  {
+    "login": "Restioson",
+    "name": "Restioson",
+    "location": "South Africa",
+    "bio": "South African developer. Currently a MSc. student in CS",
+    "public_repos": 108,
+    "followers": 82,
+    "following": 21,
+    "created_at": "2014-02-15T09:23:42Z",
+    "languages": {
+      "Rust": 11,
+      "CSS": 1,
+      "Kotlin": 1,
+      "Python": 3,
+      "Java": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:48.701403+00:00"
+  },
+  {
+    "login": "twebudge",
+    "name": "Thomas W E Budge",
+    "location": "Centurion, South Africa",
+    "bio": "Retired Founder member of Barone, Budge & Dominick (Pty) Ltd, one of South Africa's top IT Development Companies",
+    "public_repos": 0,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2014-03-30T12:03:27Z",
+    "languages": {},
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:49.483777+00:00"
+  },
+  {
+    "login": "devsticks",
+    "name": null,
+    "location": "South Africa",
+    "bio": "A proudly South African aspiring ML engineer with a background in IoT and embedded systems. \r\n\r\nInterested in developing biotech that makes a difference.",
+    "public_repos": 18,
+    "followers": 14,
+    "following": 29,
+    "created_at": "2014-05-18T03:01:32Z",
+    "languages": {
+      "C": 2,
+      "MATLAB": 1,
+      "Dart": 1,
+      "TypeScript": 1,
+      "Python": 2,
+      "JavaScript": 1,
+      "C++": 2,
+      "Java": 1,
+      "Jupyter Notebook": 3
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:50.813703+00:00"
+  },
+  {
+    "login": "WayneQwele",
+    "name": "Wayne",
+    "location": "Joburg,South Africa",
+    "bio": "Some statistician from South Africa.",
+    "public_repos": 10,
+    "followers": 12,
+    "following": 48,
+    "created_at": "2014-06-04T15:34:46Z",
+    "languages": {
+      "Jupyter Notebook": 5,
+      "Python": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:51.811829+00:00"
+  },
+  {
+    "login": "JD3010",
+    "name": "JD van Niekerk",
+    "location": "South Africa",
+    "bio": "Pricipal Software Engineer from South Africa",
+    "public_repos": 0,
+    "followers": 4,
+    "following": 0,
+    "created_at": "2014-07-02T17:46:56Z",
+    "languages": {},
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:52.620687+00:00"
+  },
+  {
+    "login": "bailyjohn",
+    "name": "South Africa Web Design",
+    "location": "South Africa",
+    "bio": null,
+    "public_repos": 0,
+    "followers": 1,
+    "following": 0,
+    "created_at": "2014-07-18T03:36:05Z",
+    "languages": {},
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:53.386444+00:00"
+  },
+  {
+    "login": "ChadGarrett",
+    "name": "Chad Garrett",
+    "location": "South Africa",
+    "bio": "Software developer from South Africa with a passion for Swift and iOS development.",
+    "public_repos": 13,
+    "followers": 0,
+    "following": 2,
+    "created_at": "2014-07-25T09:08:50Z",
+    "languages": {
+      "Swift": 8,
+      "C#": 2,
+      "JavaScript": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:54.525021+00:00"
+  },
+  {
+    "login": "baxterjones",
+    "name": "Baxtersweb",
+    "location": "South Africa",
+    "bio": "WordPress Web Designer in Cape Town, South Africa.",
+    "public_repos": 0,
+    "followers": 1,
+    "following": 0,
+    "created_at": "2014-08-16T18:56:10Z",
+    "languages": {},
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:55.337197+00:00"
+  },
+  {
+    "login": "Kevesha",
+    "name": "Kevesha Pillay",
+    "location": "South Africa",
+    "bio": "I am just your Average female Software developer from Durban South Africa",
+    "public_repos": 11,
+    "followers": 11,
+    "following": 2,
+    "created_at": "2014-08-17T18:43:07Z",
+    "languages": {
+      "TypeScript": 1,
+      "JavaScript": 9
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:23:57.738428+00:00"
+  },
+  {
+    "login": "AngusMackenzie",
+    "name": "Angus Mackenzie",
+    "location": "Cape Town, South Africa",
+    "bio": "Political Operative for the Democratic Alliance (South Africa).",
+    "public_repos": 5,
+    "followers": 1,
+    "following": 2,
+    "created_at": "2014-09-01T15:05:19Z",
+    "languages": {
+      "Jupyter Notebook": 1,
+      "HTML": 2,
+      "R": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:23:58.678654+00:00"
+  },
+  {
+    "login": "fandio",
+    "name": "judith",
+    "location": "cape town, South Africa",
+    "bio": null,
+    "public_repos": 1,
+    "followers": 1,
+    "following": 0,
+    "created_at": "2014-09-04T01:22:12Z",
+    "languages": {},
+    "gender": "female",
+    "scraped_at": "2026-05-25T15:23:59.515312+00:00"
+  },
+  {
+    "login": "ncthbrt",
+    "name": "Natalie Cuthbert",
+    "location": "Cape Town, South Africa",
+    "bio": "Trans, Woman, Game Dev/Tech Artist, Neurodivergent, South African, Cat mom x2, Gay Married, Tentative belief we're already post human",
+    "public_repos": 130,
+    "followers": 219,
+    "following": 264,
+    "created_at": "2014-09-07T18:20:57Z",
+    "languages": {
+      "Rust": 5,
+      "TypeScript": 1,
+      "Python": 2,
+      "C": 2,
+      "JavaScript": 4,
+      "C#": 2,
+      "Reason": 1,
+      "HTML": 1,
+      "Swift": 1
+    },
+    "gender": "female",
+    "scraped_at": "2026-05-25T15:24:01.035285+00:00"
+  },
+  {
+    "login": "AyabongaQwabi",
+    "name": "Ayabonga Qwabi",
+    "location": "Queenstown, South Africa",
+    "bio": "\ud83d\udc4b Hello! I\u2019m a passionate South African software developer dedicated to crafting efficient, scalable, and user-centric digital solutions. ",
+    "public_repos": 138,
+    "followers": 24,
+    "following": 23,
+    "created_at": "2014-09-16T07:56:28Z",
+    "languages": {
+      "Python": 6,
+      "TypeScript": 15,
+      "JavaScript": 6,
+      "Swift": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:24:02.491985+00:00"
+  },
+  {
+    "login": "sivumakhonco",
+    "name": "Sivuyisiwe Makhonco",
+    "location": "South Africa",
+    "bio": "Software developer based in Pretoria, South Africa. Life-long learner with a keen interest in the architecture and delivery of enterprise software systems.",
+    "public_repos": 8,
+    "followers": 2,
+    "following": 1,
+    "created_at": "2014-11-20T07:59:09Z",
+    "languages": {
+      "C#": 3,
+      "HTML": 1,
+      "PowerShell": 1,
+      "JavaScript": 2
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:24:03.450764+00:00"
+  },
+  {
+    "login": "eosishtar",
+    "name": "Mark ",
+    "location": "South Africa",
+    "bio": "I am a developer living in South Africa. ",
+    "public_repos": 12,
+    "followers": 5,
+    "following": 3,
+    "created_at": "2014-11-27T12:18:29Z",
+    "languages": {
+      "C#": 6,
+      "VBA": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:04.588362+00:00"
+  },
+  {
+    "login": "DonLuc",
+    "name": "Lucas Nkoana",
+    "location": "Pretoria (South Africa)",
+    "bio": "I'm a Software Engineer based in South Africa.\r\nCurrently working for Entelect.\r\nI have great exposure in IT consulting and client delivery. ",
+    "public_repos": 49,
+    "followers": 1,
+    "following": 2,
+    "created_at": "2015-01-12T19:46:18Z",
+    "languages": {
+      "JavaScript": 4,
+      "HTML": 3,
+      "CSS": 1,
+      "TypeScript": 4,
+      "C#": 3,
+      "C++": 1,
+      "SCSS": 1,
+      "Java": 1,
+      "Vue": 2,
+      "Dart": 1,
+      "Kotlin": 2,
+      "R": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:06.283459+00:00"
+  },
+  {
+    "login": "Layntjie",
+    "name": "Valmont Layne",
+    "location": "Muizenberg, South Africa",
+    "bio": "Born and raised in Cape Town, South Africa. I am a scholar based at the University of the Western Cape. ",
+    "public_repos": 28,
+    "followers": 4,
+    "following": 19,
+    "created_at": "2015-02-06T16:11:26Z",
+    "languages": {
+      "HTML": 3,
+      "JavaScript": 5,
+      "Sass": 1,
+      "Ruby": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:24:07.343164+00:00"
+  },
+  {
+    "login": "SilkLab-Byron",
+    "name": "Byron Erasmus",
+    "location": "South Africa",
+    "bio": "\ud83d\udc68\ud83c\udffb\u200d\ud83d\udcbb Web Developer\r\n\ud83d\udccdCape Town, South Africa",
+    "public_repos": 7,
+    "followers": 0,
+    "following": 1,
+    "created_at": "2015-02-10T16:30:24Z",
+    "languages": {
+      "JavaScript": 4,
+      "Python": 1,
+      "HTML": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:08.209513+00:00"
+  },
+  {
+    "login": "darryldaniel",
+    "name": "Darryl Daniel",
+    "location": "Durban, South Africa",
+    "bio": "Full stack javascript developer from sunny Durban, South Africa. Married to the most awesome, fun-loving, kind, caring woman and the love of my life.",
+    "public_repos": 13,
+    "followers": 4,
+    "following": 1,
+    "created_at": "2015-02-20T12:37:48Z",
+    "languages": {
+      "Ruby": 1,
+      "Astro": 1,
+      "Shell": 1,
+      "TypeScript": 3,
+      "Vue": 1,
+      "JavaScript": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:09.448422+00:00"
+  },
+  {
+    "login": "ahmadbk",
+    "name": "Ahmad",
+    "location": "Durban, South Afrcia",
+    "bio": "Computer Engineer with MScEng in Advance Wireless Communications at University of KwaZulu Natal, South Africa",
+    "public_repos": 15,
+    "followers": 15,
+    "following": 13,
+    "created_at": "2015-02-25T12:37:47Z",
+    "languages": {
+      "C++": 6,
+      "Java": 1,
+      "C#": 2,
+      "JavaScript": 2,
+      "HTML": 1,
+      "Arduino": 1,
+      "PHP": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:10.610220+00:00"
+  },
+  {
+    "login": "MaphangaCode",
+    "name": "adevnamednathi",
+    "location": "South Africa",
+    "bio": "Full-stack software engineer | \r\nSouth Africa | \r\nJava | \r\nSpring |\r\nAngular | \r\nJavascript |\r\nNodeJS ",
+    "public_repos": 1,
+    "followers": 25,
+    "following": 40,
+    "created_at": "2015-03-17T20:50:08Z",
+    "languages": {},
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:24:11.492946+00:00"
+  },
+  {
+    "login": "kmalan",
+    "name": "Katherine Malan",
+    "location": "South Africa",
+    "bio": "Professor in Department of Decision Sciences, University of South Africa.",
+    "public_repos": 1,
+    "followers": 2,
+    "following": 0,
+    "created_at": "2015-04-01T08:00:51Z",
+    "languages": {},
+    "gender": "female",
+    "scraped_at": "2026-05-25T15:24:12.297266+00:00"
+  },
+  {
+    "login": "JackieRaw33",
+    "name": "Jackie",
+    "location": "South Africa",
+    "bio": "Postdoc at Nelson Mandela University in Port Elizabeth, South Africa. Research interests include mangrove ecosystem dynamics and responses to global change.",
+    "public_repos": 0,
+    "followers": 1,
+    "following": 0,
+    "created_at": "2015-04-10T07:44:57Z",
+    "languages": {},
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:24:13.067016+00:00"
+  },
+  {
+    "login": "JacquesvanWyk",
+    "name": "Jacques van Wyk",
+    "location": "South Africa",
+    "bio": "Full stack Web Developer and Designer based in South Africa",
+    "public_repos": 39,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2015-04-18T15:10:24Z",
+    "languages": {
+      "PHP": 6,
+      "Dart": 1,
+      "HTML": 2,
+      "Blade": 2,
+      "TypeScript": 1,
+      "Shell": 2
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:14.123078+00:00"
+  },
+  {
+    "login": "GrantBarnard",
+    "name": "Grant Barnard",
+    "location": "Cape Town, South Africa",
+    "bio": "Hi, I\u2019m Grant Barnard \u2014 a Senior Front-End and UX Developer based in South Africa. I specialize in building fast, scalable, and user-focused digital experiences",
+    "public_repos": 2,
+    "followers": 3,
+    "following": 1,
+    "created_at": "2015-04-20T16:28:36Z",
+    "languages": {
+      "CSS": 2
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:14.973099+00:00"
+  },
+  {
+    "login": "lesedidd",
+    "name": "Lesedi D. Damane",
+    "location": "Pretoria, South Africa",
+    "bio": "I am a Software Developer from South Africa who is very passionate about Coding and everything Science, Technology and Philosophy.",
+    "public_repos": 6,
+    "followers": 3,
+    "following": 2,
+    "created_at": "2015-04-20T20:05:31Z",
+    "languages": {
+      "HTML": 2,
+      "Java": 2,
+      "JavaScript": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:24:15.887694+00:00"
+  },
+  {
+    "login": "aadzl",
+    "name": "Aadz",
+    "location": "Johannesburg, South Africa",
+    "bio": "Software Engineer, aspiring solutions architect and web developer. Learning is a life journey. Just a guy who loves his PC enough to speak to it. South African",
+    "public_repos": 286,
+    "followers": 13,
+    "following": 48,
+    "created_at": "2015-05-08T01:55:24Z",
+    "languages": {
+      "JavaScript": 12,
+      "PHP": 11,
+      "C#": 2,
+      "HTML": 1,
+      "C++": 1,
+      "Java": 1,
+      "TypeScript": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:24:16.910354+00:00"
+  },
+  {
+    "login": "hkdeven",
+    "name": "Deven Blackburn",
+    "location": "Cape Town, South Africa",
+    "bio": "Proudly South African based. \r\nFind me at @Nerd-Nite-Fort-Lauderdale @Allied-Steel-Buildings",
+    "public_repos": 144,
+    "followers": 47,
+    "following": 113,
+    "created_at": "2015-05-11T02:18:14Z",
+    "languages": {
+      "HTML": 1,
+      "CSS": 3,
+      "Clojure": 5,
+      "Shell": 2,
+      "JavaScript": 3,
+      "PHP": 2,
+      "Python": 2
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:17.927489+00:00"
+  },
+  {
+    "login": "stochmal",
+    "name": "Tomasz Stochmal",
+    "location": "Centurion, South Africa",
+    "bio": ":south_africa: :male_sign:\r\nSoftware Engineer\r\ndecades of experience\r\n",
+    "public_repos": 11,
+    "followers": 3,
+    "following": 1,
+    "created_at": "2015-05-19T10:16:03Z",
+    "languages": {
+      "Python": 3,
+      "Go": 2
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:18.879261+00:00"
+  },
+  {
+    "login": "merlynnsa",
+    "name": "Merlynn South Africa",
+    "location": "Pretoria, South Africa",
+    "bio": null,
+    "public_repos": 0,
+    "followers": 1,
+    "following": 0,
+    "created_at": "2015-05-27T09:57:29Z",
+    "languages": {},
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:24:19.663896+00:00"
+  },
+  {
+    "login": "TheAppchemist",
+    "name": "Melvin Musehani",
+    "location": "South Africa, Pretoria",
+    "bio": "Coder and Founder of Appchemy from South Africa",
+    "public_repos": 45,
+    "followers": 18,
+    "following": 7,
+    "created_at": "2015-06-02T11:59:27Z",
+    "languages": {
+      "Shell": 1,
+      "JavaScript": 12,
+      "TypeScript": 9,
+      "Java": 2,
+      "Dart": 1,
+      "CSS": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:20.694243+00:00"
+  },
+  {
+    "login": "csigauke",
+    "name": "Caston Sigauke",
+    "location": "Thohoyandou, Limpopo, South Africa",
+    "bio": "Associate Professor of Statistics at the University of Venda, South Africa",
+    "public_repos": 23,
+    "followers": 3,
+    "following": 4,
+    "created_at": "2015-06-16T08:16:17Z",
+    "languages": {
+      "Jupyter Notebook": 1,
+      "R": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:24:21.660377+00:00"
+  },
+  {
+    "login": "Charles3371",
+    "name": "Charles David Khunou",
+    "location": "Pretoria, South Africa",
+    "bio": "Self taught coder | sucker for knowledge | Co-founder at Solid Culture Media (PTY) LTD | Proudly South African",
+    "public_repos": 7,
+    "followers": 2,
+    "following": 2,
+    "created_at": "2015-06-25T22:16:41Z",
+    "languages": {
+      "JavaScript": 2,
+      "CSS": 1,
+      "Python": 1,
+      "Java": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:22.539334+00:00"
+  },
+  {
+    "login": "jamesazam",
+    "name": "James Mba Azam",
+    "location": "Stellenbosch, South Africa",
+    "bio": "PhD Candidate at the South African DST-NRF Center of Excellence in Epidemiological Modelling and Analysis, Stellenbosch University. I mostly code in R.",
+    "public_repos": 4,
+    "followers": 7,
+    "following": 46,
+    "created_at": "2015-07-01T09:10:02Z",
+    "languages": {
+      "HTML": 1,
+      "TeX": 1,
+      "Python": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:23.370029+00:00"
+  },
+  {
+    "login": "JVoogt",
+    "name": "JP Voogt",
+    "location": "South Africa",
+    "bio": "South African Data Tinkerer, @microsoft Fanboy, @dataplatformjhb leader, Formula 1 enthusiasts, Father and Founder of Kampi.co.za",
+    "public_repos": 14,
+    "followers": 3,
+    "following": 2,
+    "created_at": "2015-07-08T18:56:13Z",
+    "languages": {
+      "HTML": 3,
+      "TypeScript": 1,
+      "Astro": 1,
+      "CSS": 1,
+      "Jupyter Notebook": 2,
+      "TSQL": 1,
+      "C++": 1,
+      "Python": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:24:24.278293+00:00"
+  },
+  {
+    "login": "Voltage825",
+    "name": "Velice Naumoski",
+    "location": "South Africa",
+    "bio": "Software Engeneer working for @Entelect currently deployed at a major south african bank",
+    "public_repos": 12,
+    "followers": 16,
+    "following": 11,
+    "created_at": "2015-07-15T13:45:17Z",
+    "languages": {
+      "Java": 6,
+      "CSS": 2,
+      "C#": 1,
+      "TypeScript": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:24:25.168273+00:00"
+  },
+  {
+    "login": "riazarbi",
+    "name": "Riaz Arbi",
+    "location": "Cape Town, South Africa",
+    "bio": "PPO: Data Science\r\nCity of Cape Town\r\nSouth Africa",
+    "public_repos": 61,
+    "followers": 33,
+    "following": 4,
+    "created_at": "2015-07-21T11:10:31Z",
+    "languages": {
+      "R": 6,
+      "Shell": 6,
+      "Jinja": 1,
+      "Dockerfile": 5,
+      "Python": 1,
+      "Go": 1,
+      "C++": 1,
+      "HTML": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:26.191268+00:00"
+  },
+  {
+    "login": "JordanKadish",
+    "name": "Jordan Kadish",
+    "location": "Cape Town, Western Cape, South Africa",
+    "bio": "I'm a South African coder looking forward to expanding my knowledge base and working with cool people \ud83d\udc4d ",
+    "public_repos": 4,
+    "followers": 26,
+    "following": 51,
+    "created_at": "2015-07-26T14:16:57Z",
+    "languages": {
+      "Python": 2,
+      "Vim script": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:27.119626+00:00"
+  },
+  {
+    "login": "SuperUserDone",
+    "name": "Louis van der Walt",
+    "location": "South Africa",
+    "bio": "Some wannabe from South Africa. ",
+    "public_repos": 11,
+    "followers": 0,
+    "following": 1,
+    "created_at": "2015-07-27T17:28:54Z",
+    "languages": {
+      "C++": 8,
+      "C": 2
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:29.452714+00:00"
+  },
+  {
+    "login": "ThabangMendel",
+    "name": "Thabang Motsoeneng",
+    "location": "Free State,  South Africa",
+    "bio": "Keen to be a the best Web Developer in South Africa!!",
+    "public_repos": 7,
+    "followers": 0,
+    "following": 1,
+    "created_at": "2015-08-02T21:19:28Z",
+    "languages": {
+      "C": 1,
+      "Shell": 3
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:24:30.321555+00:00"
+  },
+  {
+    "login": "taylorgibb",
+    "name": "Taylor Gibb",
+    "location": "Durban, South Africa",
+    "bio": "Software Engineer from sunny South Africa. ",
+    "public_repos": 11,
+    "followers": 56,
+    "following": 31,
+    "created_at": "2015-08-05T12:49:09Z",
+    "languages": {
+      "HTML": 1,
+      "Go": 1,
+      "PowerShell": 1,
+      "JavaScript": 2,
+      "C#": 1,
+      "CoffeeScript": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:31.305371+00:00"
+  },
+  {
+    "login": "vicsyr",
+    "name": "Victor Syrzysko",
+    "location": "Cape Town - South Africa",
+    "bio": "I am an employed IT administrator in South Africa.\r\nBusy with my degree part time and looking to add programming to my skill set and even develop fulltime",
+    "public_repos": 0,
+    "followers": 1,
+    "following": 0,
+    "created_at": "2015-08-07T05:28:24Z",
+    "languages": {},
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:32.078448+00:00"
+  },
+  {
+    "login": "christian-paz",
+    "name": "christian-paz",
+    "location": "Cape Town, South Africa",
+    "bio": "I am based in sunny South Africa. I enjoy technology, crypto and all things backend.",
+    "public_repos": 21,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2015-08-12T17:46:08Z",
+    "languages": {
+      "Python": 3,
+      "Dockerfile": 1,
+      "CSS": 1,
+      "TypeScript": 1,
+      "Shell": 3
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:24:33.364930+00:00"
+  },
+  {
+    "login": "craigtong",
+    "name": "Craig Tong",
+    "location": "South Africa",
+    "bio": "Radar Specialist\r\nMilkor Integrated Systems\r\nCape Town\r\nSouth Africa",
+    "public_repos": 1,
+    "followers": 1,
+    "following": 0,
+    "created_at": "2015-08-18T15:00:26Z",
+    "languages": {
+      "Shell": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:34.187267+00:00"
+  },
+  {
+    "login": "PhoenixDev92",
+    "name": "Victor Soudien",
+    "location": "South Africa",
+    "bio": "Indie game developer working in South Africa. I love learning about and experimenting with new game ideas and technology.",
+    "public_repos": 2,
+    "followers": 1,
+    "following": 0,
+    "created_at": "2015-08-22T20:35:39Z",
+    "languages": {
+      "Java": 1,
+      "ASP": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:34.994956+00:00"
+  },
+  {
+    "login": "afrIOkaner",
+    "name": "afr[IO]kaner",
+    "location": "South Africa",
+    "bio": "Tech, code, & hardware from the southern tip of Africa \ud83c\uddff\ud83c\udde6\ud83d\udcbb\r\nStartup post-mortems and reality over hype. I/O.",
+    "public_repos": 152,
+    "followers": 3,
+    "following": 9,
+    "created_at": "2015-09-29T09:06:34Z",
+    "languages": {
+      "C++": 1,
+      "TypeScript": 9,
+      "Python": 8,
+      "JavaScript": 3,
+      "Rust": 2,
+      "Go": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:24:36.252994+00:00"
+  },
+  {
+    "login": "mapland",
+    "name": "Chris Berens",
+    "location": "Cape Town, South Africa",
+    "bio": "Chris Berens is a spatial data manager based in Cape Town, South Africa",
+    "public_repos": 3,
+    "followers": 4,
+    "following": 0,
+    "created_at": "2015-11-06T09:15:58Z",
+    "languages": {
+      "CSS": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:37.107626+00:00"
+  },
+  {
+    "login": "Steve0727",
+    "name": "Steve Randall",
+    "location": "South Africa",
+    "bio": "Chemical Engineering student at the University of Pretoria, South Africa",
+    "public_repos": 4,
+    "followers": 3,
+    "following": 3,
+    "created_at": "2015-11-12T15:49:33Z",
+    "languages": {
+      "Jupyter Notebook": 1,
+      "TeX": 2
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:38.047593+00:00"
+  },
+  {
+    "login": "braamvandyk",
+    "name": "Braam van Dyk",
+    "location": "South Africa",
+    "bio": "A chemical engineer from South Africa, playing around in Julia whenever time allows to make work more fun and a lot more efficient.",
+    "public_repos": 5,
+    "followers": 9,
+    "following": 2,
+    "created_at": "2015-11-14T19:28:09Z",
+    "languages": {
+      "Julia": 3,
+      "Jupyter Notebook": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:24:38.972011+00:00"
+  },
+  {
+    "login": "onetimking",
+    "name": "Tim King",
+    "location": "Pretoria, South Africa",
+    "bio": "Tim works at the CSIR in South Africa as a Wind Tunnel Test Engineer.",
+    "public_repos": 1,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2015-11-18T09:01:46Z",
+    "languages": {
+      "C++": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:39.792168+00:00"
+  },
+  {
+    "login": "Claudeckl",
+    "name": "Claude Lubamba",
+    "location": "South Africa, Cape Town",
+    "bio": "PhD student at the University of the Western Cape (Cape Town, South Africa) My research interest is in wireless sensor networks for healthcare and environment m",
+    "public_repos": 16,
+    "followers": 4,
+    "following": 5,
+    "created_at": "2015-11-21T08:56:15Z",
+    "languages": {
+      "C#": 1,
+      "TypeScript": 1,
+      "Python": 1,
+      "CSS": 1,
+      "Jupyter Notebook": 2,
+      "HTML": 1,
+      "C++": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:40.766956+00:00"
+  },
+  {
+    "login": "thokozani1marc",
+    "name": "Marcus",
+    "location": "South Africa, Johannesburg, Soweto",
+    "bio": "Founder of Tidely POS System | Software Developer building solutions for laundromats, dry cleaners, and sneaker care businesses across South Africa.",
+    "public_repos": 22,
+    "followers": 8,
+    "following": 20,
+    "created_at": "2015-12-19T20:15:34Z",
+    "languages": {
+      "C#": 2,
+      "TypeScript": 7,
+      "CSS": 3,
+      "HTML": 2,
+      "JavaScript": 1,
+      "Hack": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:41.784776+00:00"
+  },
+  {
+    "login": "SiphokaziFikeni",
+    "name": "Siphokazi Fikeni",
+    "location": "Johannesburg, South Africa",
+    "bio": "Mobile Developer from South Africa. Born and raised in Mthatha, Eastern Cape. Currently Based in Johannesburg, Gauteng.",
+    "public_repos": 15,
+    "followers": 14,
+    "following": 11,
+    "created_at": "2016-01-12T09:13:51Z",
+    "languages": {
+      "Ruby": 1,
+      "Swift": 3,
+      "Java": 4,
+      "Objective-C": 1,
+      "TypeScript": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:24:42.871152+00:00"
+  },
+  {
+    "login": "speeddemon786",
+    "name": "Grant Bamford",
+    "location": "South Africa",
+    "bio": "Web Developer, South Africa",
+    "public_repos": 12,
+    "followers": 10,
+    "following": 1,
+    "created_at": "2016-01-22T12:18:02Z",
+    "languages": {
+      "HTML": 1,
+      "PHP": 2
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:43.827496+00:00"
+  },
+  {
+    "login": "Mckamba12",
+    "name": "Shawn Marwizi",
+    "location": "South Africa",
+    "bio": "\ud83c\udf0d Innovator merging tech, E-sports, & education. Building Africa\u2019s biggest E-sports franchise & tackling education gaps with e-learning. Always coding.",
+    "public_repos": 4,
+    "followers": 6,
+    "following": 19,
+    "created_at": "2016-02-01T15:30:51Z",
+    "languages": {},
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:44.740763+00:00"
+  },
+  {
+    "login": "Glengoolie",
+    "name": "ShaunyDev",
+    "location": "Boston, MA / Johannesburg, South Africa",
+    "bio": "American Web Developer living in Johannesburg, South Africa",
+    "public_repos": 2,
+    "followers": 3,
+    "following": 0,
+    "created_at": "2016-02-17T20:53:14Z",
+    "languages": {
+      "JavaScript": 1,
+      "CSS": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:24:45.563145+00:00"
+  },
+  {
+    "login": "faizelfaker",
+    "name": "Faizel Faker",
+    "location": "Cape Town, South Africa",
+    "bio": "Developer from Cape Town South Africa. Interested in all things tech. Blockchain, AI, mobile, IOT etc. ",
+    "public_repos": 1,
+    "followers": 5,
+    "following": 0,
+    "created_at": "2016-02-25T10:44:08Z",
+    "languages": {},
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:24:46.397996+00:00"
+  },
+  {
+    "login": "PieterPieters",
+    "name": "Pieter Pieters",
+    "location": "South Africa",
+    "bio": "My name is Pieter Pieters and Founder & Pro Photographer for Pieter Pieters Photography. Based in Klerksdorp South Africa but fortunate enough to travel nationa",
+    "public_repos": 0,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2016-03-16T15:13:59Z",
+    "languages": {},
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:47.209458+00:00"
+  },
+  {
+    "login": "Sphinx818",
+    "name": "Stuart Henning",
+    "location": "South Africa",
+    "bio": "CTO & Founder at Delta Automation South Africa.",
+    "public_repos": 1,
+    "followers": 0,
+    "following": 2,
+    "created_at": "2016-03-23T19:27:41Z",
+    "languages": {
+      "HTML": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:48.014339+00:00"
+  },
+  {
+    "login": "BrigitteSprung",
+    "name": null,
+    "location": "South Africa",
+    "bio": "Full Stack Developer based out of Cape Town, South Africa",
+    "public_repos": 21,
+    "followers": 15,
+    "following": 3,
+    "created_at": "2016-04-09T08:01:56Z",
+    "languages": {
+      "Python": 3,
+      "JavaScript": 4,
+      "HTML": 2,
+      "CSS": 2,
+      "SCSS": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:24:49.354397+00:00"
+  },
+  {
+    "login": "hfjooste",
+    "name": "Henry Jooste",
+    "location": "South Africa",
+    "bio": "Full time game developer based in South Africa. Mostly using C++, Python and Unreal Engine",
+    "public_repos": 16,
+    "followers": 27,
+    "following": 2,
+    "created_at": "2016-04-16T15:32:30Z",
+    "languages": {
+      "C++": 9,
+      "C#": 5,
+      "Python": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:50.419693+00:00"
+  },
+  {
+    "login": "gkamanga",
+    "name": "George Kamanga",
+    "location": "Pretoria(South Africa)",
+    "bio": "Malawian Member of ICT association of Malawi (ICTAM) # 18-0026 And Institute of Information Technology Professionals South Africa (IITPSA) # K07770",
+    "public_repos": 0,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2016-04-20T04:12:07Z",
+    "languages": {},
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:51.164387+00:00"
+  },
+  {
+    "login": "Latasha",
+    "name": "Latasha Africa",
+    "location": "Cape Town, South Africa",
+    "bio": null,
+    "public_repos": 4,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2016-05-06T18:37:58Z",
+    "languages": {
+      "R": 1
+    },
+    "gender": "female",
+    "scraped_at": "2026-05-25T15:24:52.116738+00:00"
+  },
+  {
+    "login": "tlalemasimong",
+    "name": "Tlale Paul Masimong",
+    "location": "Riversands, Gauteng, South Africa",
+    "bio": "A dynamic young creative from South Africa passionate about technology and software development.",
+    "public_repos": 3,
+    "followers": 1,
+    "following": 3,
+    "created_at": "2016-05-17T16:57:09Z",
+    "languages": {
+      "CSS": 2
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:24:52.999915+00:00"
+  },
+  {
+    "login": "HeinzSchmidt",
+    "name": "Heinz Donnelly Schmidt",
+    "location": "South Yorkshire, UK",
+    "bio": "DevOps Engineer on AWS & Azure. Terraform, Bash/Zsh, Python, NodeJs, IaC. Born in South Africa",
+    "public_repos": 43,
+    "followers": 2,
+    "following": 6,
+    "created_at": "2016-05-31T13:30:08Z",
+    "languages": {
+      "Python": 5,
+      "JavaScript": 2,
+      "TypeScript": 3,
+      "Kotlin": 1,
+      "HCL": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:54.466913+00:00"
+  },
+  {
+    "login": "Seinstein525",
+    "name": "Sphamandla Nkosi",
+    "location": "South Africa",
+    "bio": "I'm a recipient of a BSc in Actuarial and Financial Mathematics from the University of Pretoria in South Africa. \r\nI'm perusing specialization in Data Science",
+    "public_repos": 4,
+    "followers": 1,
+    "following": 0,
+    "created_at": "2016-06-01T09:01:47Z",
+    "languages": {
+      "Jupyter Notebook": 1,
+      "HTML": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:24:55.302672+00:00"
+  },
+  {
+    "login": "QuincyBosch",
+    "name": "Quinton Bosch",
+    "location": "South Africa",
+    "bio": "South African Software Developer and Gaming enthusiast",
+    "public_repos": 13,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2016-06-03T06:55:33Z",
+    "languages": {
+      "HTML": 1,
+      "CSS": 1,
+      "JavaScript": 4,
+      "SCSS": 1,
+      "C#": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:56.219429+00:00"
+  },
+  {
+    "login": "ozmiles",
+    "name": "Testing",
+    "location": "South Africa",
+    "bio": "Web Development Management based in South Africa",
+    "public_repos": 0,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2016-06-03T12:50:48Z",
+    "languages": {},
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:24:56.990490+00:00"
+  },
+  {
+    "login": "Anthony-Kolenic",
+    "name": "Anthony",
+    "location": "Pretoria, South Africa",
+    "bio": "Software Engineer from South Africa. Interested in AI and Graphics.",
+    "public_repos": 2,
+    "followers": 2,
+    "following": 3,
+    "created_at": "2016-06-03T17:25:43Z",
+    "languages": {
+      "Python": 2
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:24:59.182895+00:00"
+  },
+  {
+    "login": "mphile150",
+    "name": "Nkosingiphile Emmanuel Mchunu",
+    "location": "South Africa",
+    "bio": "I am creative the founder of AfricanDinar the new African crypto currency in South Africa",
+    "public_repos": 1,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2016-06-08T13:28:05Z",
+    "languages": {},
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:24:59.992142+00:00"
+  },
+  {
+    "login": "maseinc",
+    "name": "Mason Ince",
+    "location": "Durban, South Africa",
+    "bio": "I am a business analyst at a popular property portal in South Africa.  I am really interested in UX and Front-end web development. ",
+    "public_repos": 0,
+    "followers": 2,
+    "following": 0,
+    "created_at": "2016-06-09T18:28:12Z",
+    "languages": {},
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:25:00.734932+00:00"
+  },
+  {
+    "login": "alexander9822",
+    "name": "Alexander Faiers",
+    "location": "Cape Town, South Africa",
+    "bio": "South African.\r\nSoftware Developer\r\nSound and Lighting Engineer",
+    "public_repos": 6,
+    "followers": 2,
+    "following": 3,
+    "created_at": "2016-06-11T19:51:19Z",
+    "languages": {
+      "Shell": 1,
+      "PHP": 2,
+      "CSS": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:25:01.682618+00:00"
+  },
+  {
+    "login": "Carolejimerson",
+    "name": null,
+    "location": "South Africa",
+    "bio": "Beverley Hui Architects is a well known architect south africa.Contact the architect directly for more information at huibeverley@yahoo.com",
+    "public_repos": 0,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2016-06-14T10:24:24Z",
+    "languages": {},
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:25:02.472999+00:00"
+  },
+  {
+    "login": "Loukie01",
+    "name": "Lourens Badenhorst",
+    "location": "Pretoria, South Africa",
+    "bio": "I am a business analyst working and staying in South Africa. I have the ambition to become a tech entrepreneur.",
+    "public_repos": 0,
+    "followers": 1,
+    "following": 0,
+    "created_at": "2016-06-20T11:58:20Z",
+    "languages": {},
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:25:03.253194+00:00"
+  },
+  {
+    "login": "k8lyn",
+    "name": "K8lyn",
+    "location": "Cape Town, South Africa",
+    "bio": "Cape Town, South Africa. \r\nA novice. In love with Felicia Day since Supernatural. \r\nNerd since birth. But not a burden. \r\n\r\n",
+    "public_repos": 0,
+    "followers": 3,
+    "following": 1,
+    "created_at": "2016-06-23T20:10:31Z",
+    "languages": {},
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:25:04.056352+00:00"
+  },
+  {
+    "login": "GontseMolefe",
+    "name": "Gontse Molefe",
+    "location": "South Africa ",
+    "bio": "I'm born and breed in Soweto (South Africa).",
+    "public_repos": 6,
+    "followers": 4,
+    "following": 0,
+    "created_at": "2016-06-24T07:37:39Z",
+    "languages": {
+      "PHP": 1,
+      "HTML": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:25:05.001272+00:00"
+  },
+  {
+    "login": "corwynneleng",
+    "name": "Corwynne Leng",
+    "location": "South Africa",
+    "bio": "I am a university student living in South Africa. I want to learn coding because I believe that is where the future is heading towards now",
+    "public_repos": 1,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2016-06-30T18:04:40Z",
+    "languages": {
+      "Roff": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:25:05.853125+00:00"
+  },
+  {
+    "login": "Devin-Africa",
+    "name": "Devin Africa",
+    "location": "Western Cape, South Africa",
+    "bio": null,
+    "public_repos": 1,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2016-07-01T07:27:41Z",
+    "languages": {},
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:25:06.666339+00:00"
+  },
+  {
+    "login": "pierrenortje",
+    "name": "Pierre Nortje",
+    "location": "Cape Town, South Africa",
+    "bio": "Software developer based in Cape Town, South Africa.",
+    "public_repos": 15,
+    "followers": 11,
+    "following": 0,
+    "created_at": "2016-07-04T21:41:36Z",
+    "languages": {
+      "C#": 11,
+      "JavaScript": 4
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:25:07.613528+00:00"
+  },
+  {
+    "login": "terry86er",
+    "name": "Terence Ndlovu ",
+    "location": "Pietermaritzburg, KwaZulu-Natal, South Africa ",
+    "bio": "I am South African, a self taught graphic designer. I want to learn how to code so I can complete all my planned projects start to finish. I love technology. ",
+    "public_repos": 1,
+    "followers": 1,
+    "following": 0,
+    "created_at": "2016-07-06T12:19:53Z",
+    "languages": {},
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:25:08.425010+00:00"
+  },
+  {
+    "login": "DominicArendse-zz",
+    "name": "Dominic Arendse",
+    "location": "Cape Town, South Africa",
+    "bio": "I'm a Programmer and App Developer based in Cape Town, South Africa.",
+    "public_repos": 0,
+    "followers": 1,
+    "following": 0,
+    "created_at": "2016-07-18T10:32:37Z",
+    "languages": {},
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:25:09.216300+00:00"
+  },
+  {
+    "login": "kwazzi-jack",
+    "name": "Brian Welman",
+    "location": "South Africa",
+    "bio": "I am Brian, a bald, bearded South African postgraduate scholar with a deep fascination for high-level machine learning, i.e. AI systems development.",
+    "public_repos": 24,
+    "followers": 3,
+    "following": 6,
+    "created_at": "2016-07-25T08:30:40Z",
+    "languages": {
+      "Jupyter Notebook": 3,
+      "Python": 11,
+      "TypeScript": 1,
+      "TeX": 1,
+      "Rust": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:25:10.231964+00:00"
+  },
+  {
+    "login": "Nazarene",
+    "name": "Andrei",
+    "location": "South Africa ",
+    "bio": "DTP graduate from South Africa. I enjoy graphic deign, IT and playing guitar.",
+    "public_repos": 0,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2016-07-25T11:33:50Z",
+    "languages": {},
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:25:10.989431+00:00"
+  },
+  {
+    "login": "zimprince",
+    "name": "Angus Fungayi Chikowore",
+    "location": "Durban, South Africa",
+    "bio": "Based in Durban South Africa. Currently self-employed with a small Graphic and Software design company",
+    "public_repos": 4,
+    "followers": 1,
+    "following": 2,
+    "created_at": "2016-07-25T13:48:49Z",
+    "languages": {
+      "TypeScript": 1,
+      "JavaScript": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:25:11.839293+00:00"
+  },
+  {
+    "login": "kinjaja",
+    "name": "Jay Precious",
+    "location": "East London, Republc of South Africa",
+    "bio": "founder 3Dot ICT Hub, Lives in South Africa, a coder,Tech Addict, Avid Reader, Tech Enterprenur, a father and a farmer.",
+    "public_repos": 1,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2016-08-04T14:00:18Z",
+    "languages": {},
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:25:12.686016+00:00"
+  },
+  {
+    "login": "MDP09",
+    "name": "Mari du Plessis",
+    "location": "South Africa",
+    "bio": "I am currently studying part time online over UNISA (University of South Africa) for a BSc in Computing.",
+    "public_repos": 1,
+    "followers": 8,
+    "following": 5,
+    "created_at": "2016-08-07T17:23:32Z",
+    "languages": {},
+    "gender": "female",
+    "scraped_at": "2026-05-25T15:25:13.522456+00:00"
+  },
+  {
+    "login": "Ruanrw",
+    "name": "Daniel",
+    "location": "Pretoria, South Africa",
+    "bio": "I am currently a civil engineering student at the University of Pretoria in South Africa. I am new to coding and keen on learning some incredible coding \"art\".",
+    "public_repos": 0,
+    "followers": 1,
+    "following": 0,
+    "created_at": "2016-08-08T21:50:20Z",
+    "languages": {},
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:25:14.309536+00:00"
+  },
+  {
+    "login": "FozzyGo4",
+    "name": "Stephen Forster",
+    "location": "South Africa",
+    "bio": "A South African entrepreneur with a passion for open source, telecoms and cloud solutions. ",
+    "public_repos": 4,
+    "followers": 3,
+    "following": 0,
+    "created_at": "2016-08-08T22:25:53Z",
+    "languages": {
+      "PHP": 2
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:25:15.152334+00:00"
+  },
+  {
+    "login": "jornvw",
+    "name": "Jorn ",
+    "location": "Robertson, Western Cape, South Africa",
+    "bio": "23 year old born in Belgium and moved to South-Africa when i was 11 years old.\r\nBusy reinventing my life through my passion for computers.",
+    "public_repos": 0,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2016-08-12T16:48:53Z",
+    "languages": {},
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:25:15.914021+00:00"
+  },
+  {
+    "login": "mconradiesa",
+    "name": "Matthew Conradie",
+    "location": "Durban, South Africa",
+    "bio": "I am a grade 10 to 12 computer science teacher at a school in South Africa. ",
+    "public_repos": 3,
+    "followers": 1,
+    "following": 0,
+    "created_at": "2016-08-15T06:58:08Z",
+    "languages": {},
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:25:16.757223+00:00"
+  },
+  {
+    "login": "MrBrendanC",
+    "name": "MrBrendan",
+    "location": "Durban, South Africa",
+    "bio": "I\u2019m a South African Full Stack Web Developer in the GMT+2 Time Zone with 21 years experience in website development, programming & business automation software",
+    "public_repos": 4,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2016-08-25T07:48:07Z",
+    "languages": {
+      "PHP": 1,
+      "JavaScript": 1,
+      "CSS": 1,
+      "HTML": 1
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:25:17.602101+00:00"
+  },
+  {
+    "login": "stigakgatla",
+    "name": "Tebogo",
+    "location": "South Africa",
+    "bio": "Adventurous and lover of all things beautiful\r\n\r\nSouth Africa",
+    "public_repos": 1,
+    "followers": 1,
+    "following": 0,
+    "created_at": "2016-08-27T09:21:08Z",
+    "languages": {},
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:25:18.399934+00:00"
+  },
+  {
+    "login": "Bradleypuckree",
+    "name": "Bradley Puckree",
+    "location": "Durban, South Africa",
+    "bio": "Web Developer & Designer from Durban, South Africa",
+    "public_repos": 25,
+    "followers": 1,
+    "following": 1,
+    "created_at": "2016-08-30T07:26:22Z",
+    "languages": {
+      "HTML": 12,
+      "PHP": 3,
+      "JavaScript": 2,
+      "Hack": 1,
+      "CSS": 6
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:25:19.400776+00:00"
+  },
+  {
+    "login": "KeithRoyKennedy",
+    "name": "Keith Kennedy",
+    "location": "South Africa",
+    "bio": "South African Born Developer!",
+    "public_repos": 23,
+    "followers": 26,
+    "following": 33,
+    "created_at": "2016-09-05T04:50:39Z",
+    "languages": {
+      "PHP": 4,
+      "Jupyter Notebook": 1,
+      "JavaScript": 1,
+      "Vue": 1
+    },
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:25:20.457786+00:00"
+  },
+  {
+    "login": "jt12991",
+    "name": "josh thomas",
+    "location": "johannesburg, south africa ",
+    "bio": "I'm a student, South African I want to learn how to code ",
+    "public_repos": 1,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2016-09-05T12:57:21Z",
+    "languages": {},
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:25:21.271023+00:00"
+  },
+  {
+    "login": "Justindean101",
+    "name": "Justin Pretorius ",
+    "location": "Cape Town, South Africa ",
+    "bio": "19/South African/Gaming Enthusiast/Biker/Enjoy hanging out with friends and meeting new people/Learning how to code/Enjoy friendly vibes :)",
+    "public_repos": 0,
+    "followers": 1,
+    "following": 0,
+    "created_at": "2016-09-07T18:10:27Z",
+    "languages": {},
+    "gender": "male",
+    "scraped_at": "2026-05-25T15:25:22.051291+00:00"
+  },
+  {
+    "login": "NuttyGit",
+    "name": "Nkosinathi Fungene",
+    "location": "South Africa",
+    "bio": "South African based Software Developer. A student for life. PHP and C# are my languages of choice however I'm not one to discriminate. ",
+    "public_repos": 0,
+    "followers": 1,
+    "following": 4,
+    "created_at": "2016-09-11T17:21:04Z",
+    "languages": {},
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:25:22.839467+00:00"
+  },
+  {
+    "login": "Mthadube",
+    "name": "Mthandazo Dube",
+    "location": "South Africa",
+    "bio": "I'm a passionate full-stack web developer based in Midrand, South Africa. I have a passion for web development and love to create great-looking web apps.",
+    "public_repos": 7,
+    "followers": 0,
+    "following": 0,
+    "created_at": "2016-09-15T12:41:03Z",
+    "languages": {
+      "HTML": 4
+    },
+    "gender": "unknown",
+    "scraped_at": "2026-05-25T15:25:23.696802+00:00"
+  }
+]

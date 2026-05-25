@@ -1,0 +1,166 @@
+{
+  "generated_at": "2026-05-25T15:25:25.267087+00:00",
+  "total_developers": 150,
+  "gender": {
+    "male": {
+      "count": 87,
+      "pct": 58.0
+    },
+    "female": {
+      "count": 5,
+      "pct": 3.3
+    },
+    "unknown": {
+      "count": 58,
+      "pct": 38.7
+    }
+  },
+  "top_languages": [
+    {
+      "language": "JavaScript",
+      "count": 189
+    },
+    {
+      "language": "Python",
+      "count": 112
+    },
+    {
+      "language": "HTML",
+      "count": 106
+    },
+    {
+      "language": "TypeScript",
+      "count": 98
+    },
+    {
+      "language": "Java",
+      "count": 86
+    },
+    {
+      "language": "C#",
+      "count": 86
+    },
+    {
+      "language": "PHP",
+      "count": 61
+    },
+    {
+      "language": "CSS",
+      "count": 57
+    },
+    {
+      "language": "C++",
+      "count": 43
+    },
+    {
+      "language": "Jupyter Notebook",
+      "count": 31
+    },
+    {
+      "language": "Go",
+      "count": 29
+    },
+    {
+      "language": "Shell",
+      "count": 26
+    },
+    {
+      "language": "Rust",
+      "count": 26
+    },
+    {
+      "language": "Swift",
+      "count": 21
+    },
+    {
+      "language": "Clojure",
+      "count": 16
+    }
+  ],
+  "top_female_languages": [
+    {
+      "language": "Rust",
+      "count": 5
+    },
+    {
+      "language": "JavaScript",
+      "count": 4
+    },
+    {
+      "language": "Python",
+      "count": 2
+    },
+    {
+      "language": "C",
+      "count": 2
+    },
+    {
+      "language": "C#",
+      "count": 2
+    },
+    {
+      "language": "TypeScript",
+      "count": 1
+    },
+    {
+      "language": "Reason",
+      "count": 1
+    },
+    {
+      "language": "HTML",
+      "count": 1
+    },
+    {
+      "language": "Swift",
+      "count": 1
+    },
+    {
+      "language": "R",
+      "count": 1
+    }
+  ],
+  "province_breakdown": [
+    {
+      "province": "Other / Unresolved",
+      "count": 71
+    },
+    {
+      "province": "Western Cape",
+      "count": 35
+    },
+    {
+      "province": "Gauteng",
+      "count": 29
+    },
+    {
+      "province": "KwaZulu-Natal",
+      "count": 11
+    },
+    {
+      "province": "Free State",
+      "count": 2
+    },
+    {
+      "province": "Limpopo",
+      "count": 1
+    },
+    {
+      "province": "Eastern Cape",
+      "count": 1
+    }
+  ],
+  "account_age_breakdown": [
+    {
+      "range": "6\u201310 years",
+      "count": 34
+    },
+    {
+      "range": "10+ years",
+      "count": 116
+    }
+  ],
+  "averages": {
+    "followers": 16.1,
+    "public_repos": 22.7
+  }
+}
