@@ -1,159 +1,462 @@
 {
-  "generated_at": "2026-05-25T16:00:43.760431+00:00",
-  "total_developers": 900,
+  "generated_at": "2026-05-25T23:26:51.866423+00:00",
+  "total_developers": 1636,
   "gender": {
     "male": {
-      "count": 334,
-      "pct": 37.1
+      "count": 790,
+      "pct": 48.3
     },
     "female": {
-      "count": 59,
-      "pct": 6.6
+      "count": 112,
+      "pct": 6.8
     },
     "unknown": {
-      "count": 507,
-      "pct": 56.3
+      "count": 734,
+      "pct": 44.9
+    }
+  },
+  "gender_detail": {
+    "female": {
+      "count": 112,
+      "pct": 6.8,
+      "averages": {
+        "followers": 6.5,
+        "public_repos": 11.7,
+        "following": 7.0
+      },
+      "top_languages": [
+        {
+          "language": "JavaScript",
+          "count": 105
+        },
+        {
+          "language": "HTML",
+          "count": 65
+        },
+        {
+          "language": "Python",
+          "count": 57
+        },
+        {
+          "language": "TypeScript",
+          "count": 46
+        },
+        {
+          "language": "Java",
+          "count": 29
+        },
+        {
+          "language": "Jupyter Notebook",
+          "count": 28
+        },
+        {
+          "language": "CSS",
+          "count": 21
+        },
+        {
+          "language": "PHP",
+          "count": 19
+        },
+        {
+          "language": "C",
+          "count": 16
+        },
+        {
+          "language": "C#",
+          "count": 15
+        }
+      ],
+      "province_breakdown": [
+        {
+          "province": "Other / Unresolved",
+          "count": 58
+        },
+        {
+          "province": "Western Cape",
+          "count": 30
+        },
+        {
+          "province": "Gauteng",
+          "count": 23
+        },
+        {
+          "province": "KwaZulu-Natal",
+          "count": 1
+        }
+      ],
+      "account_age_breakdown": [
+        {
+          "range": "1\u20133 years",
+          "count": 11
+        },
+        {
+          "range": "3\u20136 years",
+          "count": 23
+        },
+        {
+          "range": "6\u201310 years",
+          "count": 21
+        },
+        {
+          "range": "10+ years",
+          "count": 57
+        }
+      ]
+    },
+    "male": {
+      "count": 790,
+      "pct": 48.3,
+      "averages": {
+        "followers": 10.6,
+        "public_repos": 14.7,
+        "following": 7.4
+      },
+      "top_languages": [
+        {
+          "language": "JavaScript",
+          "count": 849
+        },
+        {
+          "language": "Python",
+          "count": 508
+        },
+        {
+          "language": "TypeScript",
+          "count": 459
+        },
+        {
+          "language": "HTML",
+          "count": 414
+        },
+        {
+          "language": "C#",
+          "count": 387
+        },
+        {
+          "language": "Java",
+          "count": 344
+        },
+        {
+          "language": "PHP",
+          "count": 264
+        },
+        {
+          "language": "Shell",
+          "count": 168
+        },
+        {
+          "language": "C++",
+          "count": 166
+        },
+        {
+          "language": "CSS",
+          "count": 161
+        }
+      ],
+      "province_breakdown": [
+        {
+          "province": "Other / Unresolved",
+          "count": 389
+        },
+        {
+          "province": "Western Cape",
+          "count": 192
+        },
+        {
+          "province": "Gauteng",
+          "count": 150
+        },
+        {
+          "province": "KwaZulu-Natal",
+          "count": 39
+        },
+        {
+          "province": "Eastern Cape",
+          "count": 12
+        },
+        {
+          "province": "Free State",
+          "count": 3
+        },
+        {
+          "province": "Limpopo",
+          "count": 3
+        },
+        {
+          "province": "Mpumalanga",
+          "count": 1
+        },
+        {
+          "province": "North West",
+          "count": 1
+        }
+      ],
+      "account_age_breakdown": [
+        {
+          "range": "1\u20133 years",
+          "count": 48
+        },
+        {
+          "range": "3\u20136 years",
+          "count": 101
+        },
+        {
+          "range": "6\u201310 years",
+          "count": 120
+        },
+        {
+          "range": "10+ years",
+          "count": 521
+        }
+      ]
+    },
+    "unknown": {
+      "count": 734,
+      "pct": 44.9,
+      "averages": {
+        "followers": 4.5,
+        "public_repos": 11.3,
+        "following": 5.7
+      },
+      "top_languages": [
+        {
+          "language": "JavaScript",
+          "count": 724
+        },
+        {
+          "language": "HTML",
+          "count": 458
+        },
+        {
+          "language": "Python",
+          "count": 420
+        },
+        {
+          "language": "TypeScript",
+          "count": 317
+        },
+        {
+          "language": "Java",
+          "count": 274
+        },
+        {
+          "language": "C#",
+          "count": 197
+        },
+        {
+          "language": "CSS",
+          "count": 188
+        },
+        {
+          "language": "PHP",
+          "count": 148
+        },
+        {
+          "language": "Shell",
+          "count": 106
+        },
+        {
+          "language": "Jupyter Notebook",
+          "count": 89
+        }
+      ],
+      "province_breakdown": [
+        {
+          "province": "Other / Unresolved",
+          "count": 409
+        },
+        {
+          "province": "Gauteng",
+          "count": 169
+        },
+        {
+          "province": "Western Cape",
+          "count": 105
+        },
+        {
+          "province": "KwaZulu-Natal",
+          "count": 28
+        },
+        {
+          "province": "Free State",
+          "count": 8
+        },
+        {
+          "province": "Eastern Cape",
+          "count": 7
+        },
+        {
+          "province": "Limpopo",
+          "count": 5
+        },
+        {
+          "province": "North West",
+          "count": 2
+        },
+        {
+          "province": "Mpumalanga",
+          "count": 1
+        }
+      ],
+      "account_age_breakdown": [
+        {
+          "range": "1\u20133 years",
+          "count": 125
+        },
+        {
+          "range": "3\u20136 years",
+          "count": 172
+        },
+        {
+          "range": "6\u201310 years",
+          "count": 163
+        },
+        {
+          "range": "10+ years",
+          "count": 274
+        }
+      ]
     }
   },
   "top_languages": [
     {
       "language": "JavaScript",
-      "count": 840
-    },
-    {
-      "language": "HTML",
-      "count": 649
+      "count": 1678
     },
     {
       "language": "Python",
-      "count": 522
+      "count": 985
+    },
+    {
+      "language": "HTML",
+      "count": 937
     },
     {
       "language": "TypeScript",
-      "count": 351
-    },
-    {
-      "language": "CSS",
-      "count": 267
+      "count": 822
     },
     {
       "language": "Java",
-      "count": 238
+      "count": 647
     },
     {
       "language": "C#",
-      "count": 198
-    },
-    {
-      "language": "Jupyter Notebook",
-      "count": 160
+      "count": 599
     },
     {
       "language": "PHP",
-      "count": 149
+      "count": 431
+    },
+    {
+      "language": "CSS",
+      "count": 370
     },
     {
       "language": "Shell",
-      "count": 111
+      "count": 289
     },
     {
       "language": "C++",
-      "count": 91
+      "count": 240
+    },
+    {
+      "language": "Jupyter Notebook",
+      "count": 211
     },
     {
       "language": "C",
-      "count": 87
-    },
-    {
-      "language": "Rust",
-      "count": 51
-    },
-    {
-      "language": "Kotlin",
-      "count": 47
+      "count": 185
     },
     {
       "language": "Go",
-      "count": 43
+      "count": 163
+    },
+    {
+      "language": "Ruby",
+      "count": 141
+    },
+    {
+      "language": "Rust",
+      "count": 106
     }
   ],
   "top_female_languages": [
     {
       "language": "JavaScript",
-      "count": 63
+      "count": 105
     },
     {
       "language": "HTML",
-      "count": 39
+      "count": 65
     },
     {
       "language": "Python",
-      "count": 35
+      "count": 57
+    },
+    {
+      "language": "TypeScript",
+      "count": 46
+    },
+    {
+      "language": "Java",
+      "count": 29
     },
     {
       "language": "Jupyter Notebook",
       "count": 28
     },
     {
-      "language": "TypeScript",
-      "count": 23
-    },
-    {
-      "language": "Java",
-      "count": 16
-    },
-    {
       "language": "CSS",
-      "count": 12
+      "count": 21
+    },
+    {
+      "language": "PHP",
+      "count": 19
     },
     {
       "language": "C",
-      "count": 11
-    },
-    {
-      "language": "Shell",
-      "count": 9
+      "count": 16
     },
     {
       "language": "C#",
-      "count": 8
+      "count": 15
     }
   ],
   "province_breakdown": [
     {
       "province": "Other / Unresolved",
-      "count": 468
+      "count": 856
     },
     {
       "province": "Gauteng",
-      "count": 192
+      "count": 342
     },
     {
       "province": "Western Cape",
-      "count": 160
+      "count": 327
     },
     {
       "province": "KwaZulu-Natal",
-      "count": 48
+      "count": 68
     },
     {
       "province": "Eastern Cape",
-      "count": 11
+      "count": 19
     },
     {
       "province": "Free State",
-      "count": 10
+      "count": 11
     },
     {
       "province": "Limpopo",
-      "count": 7
-    },
-    {
-      "province": "Mpumalanga",
-      "count": 2
+      "count": 8
     },
     {
       "province": "North West",
+      "count": 3
+    },
+    {
+      "province": "Mpumalanga",
       "count": 2
     }
   ],
@@ -172,11 +475,11 @@
     },
     {
       "range": "10+ years",
-      "count": 116
+      "count": 852
     }
   ],
   "averages": {
-    "followers": 5.2,
-    "public_repos": 10.6
+    "followers": 7.6,
+    "public_repos": 13.0
   }
 }
