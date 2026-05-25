@@ -197,7 +197,8 @@
     color: var(--muted);
     margin-bottom: 20px;
   }
-  .chart-wrap canvas { max-height: 280px; }
+  .chart-wrap { position: relative; }
+  .chart-wrap canvas { display: block; }
 
   .gender-bars { display: flex; flex-direction: column; gap: 14px; }
   .gender-row  { display: flex; align-items: center; gap: 12px; }
@@ -540,24 +541,43 @@ function langColors(n) {
 }
 
 function makeBarChart(id, labels, data, colors) {
-  const ctx = document.getElementById(id).getContext('2d');
+  const canvas = document.getElementById(id);
+  // Size canvas height so every bar + label has room — 28px per item minimum
+  const minH = Math.max(220, labels.length * 28);
+  canvas.parentElement.style.height = minH + 'px';
+  canvas.style.height = minH + 'px';
+
+  // Longest label length drives left padding
+  const maxLabelLen = Math.max(...labels.map(l => l.length));
+  const yPadding = Math.max(80, maxLabelLen * 7);
+
+  const ctx = canvas.getContext('2d');
   return new Chart(ctx, {
     type: 'bar',
     data: { labels, datasets: [{ data, backgroundColor: colors, borderRadius: 4, borderSkipped: false }] },
     options: {
       indexAxis: 'y',
       responsive: true,
+      maintainAspectRatio: false,
+      layout: { padding: { left: 0 } },
       plugins: {
         legend: { display: false },
         tooltip: {
           backgroundColor: '#0d1117', borderColor: '#1e2d3d', borderWidth: 1,
           titleColor: '#e6edf3', bodyColor: '#5a7080',
-          callbacks: { label: ctx => `  ${ctx.raw.toLocaleString()} repos` },
+          callbacks: { label: c => `  ${c.raw.toLocaleString()} repos` },
         },
       },
       scales: {
         x: { grid: { color: '#1e2d3d' }, ticks: { color: '#5a7080' } },
-        y: { grid: { display: false }, ticks: { color: '#c9d1d9', font: { size: 11 } } },
+        y: {
+          grid: { display: false },
+          afterFit(scale) { scale.width = yPadding; },
+          ticks: {
+            font: { size: 11, family: "'Space Mono', monospace" },
+            color(c) { return colors[c.index] || '#c9d1d9'; },
+          },
+        },
       },
     },
   });
@@ -690,24 +710,39 @@ function renderGenderDetail(key, genderDetail) {
   if (g.top_languages.length) {
     const ll = g.top_languages.map(l => l.language);
     const ld = g.top_languages.map(l => l.count);
-    const ctx = document.getElementById('gd-chart-langs').getContext('2d');
+    const lc = langColors(ll.length);
+    const canvas = document.getElementById('gd-chart-langs');
+    const minH = Math.max(200, ll.length * 28);
+    canvas.parentElement.style.height = minH + 'px';
+    canvas.style.height = minH + 'px';
+    const maxLabelLen = Math.max(...ll.map(l => l.length));
+    const yPadding = Math.max(80, maxLabelLen * 7);
+    const ctx = canvas.getContext('2d');
     _gdLangChart = new Chart(ctx, {
       type: 'bar',
-      data: { labels: ll, datasets: [{ data: ld, backgroundColor: langColors(ll.length), borderRadius: 4, borderSkipped: false }] },
+      data: { labels: ll, datasets: [{ data: ld, backgroundColor: lc, borderRadius: 4, borderSkipped: false }] },
       options: {
         indexAxis: 'y',
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
           legend: { display: false },
           tooltip: {
             backgroundColor: '#0d1117', borderColor: '#1e2d3d', borderWidth: 1,
             titleColor: '#e6edf3', bodyColor: '#5a7080',
-            callbacks: { label: ctx => `  ${ctx.raw.toLocaleString()} repos` },
+            callbacks: { label: c => `  ${c.raw.toLocaleString()} repos` },
           },
         },
         scales: {
           x: { grid: { color: '#1e2d3d' }, ticks: { color: '#5a7080' } },
-          y: { grid: { display: false }, ticks: { color: '#c9d1d9', font: { size: 11 } } },
+          y: {
+            grid: { display: false },
+            afterFit(scale) { scale.width = yPadding; },
+            ticks: {
+              font: { size: 11, family: "'Space Mono', monospace" },
+              color(c) { return lc[c.index] || '#c9d1d9'; },
+            },
+          },
         },
       },
     });
