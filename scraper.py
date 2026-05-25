@@ -11,7 +11,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-TOKEN = os.getenv("GITHUB_TOKEN")
+TOKEN = os.getenv("GH_SCRAPER_TOKEN") or os.getenv("GITHUB_TOKEN")
+if not TOKEN:
+    raise RuntimeError("No GitHub token found. Set GH_SCRAPER_TOKEN or GITHUB_TOKEN.")
+
 HEADERS = {
     "Authorization": f"Bearer {TOKEN}",
     "Accept": "application/vnd.github+json",
@@ -22,6 +25,10 @@ DATA_DIR = Path("data")
 DEVELOPERS_FILE = DATA_DIR / "developers.json"
 PROGRESS_FILE = DATA_DIR / "progress.json"
 
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(name)s — %(message)s",
+)
 logger = logging.getLogger("scraper")
 
 _gender_detector = gender.Detector(case_sensitive=False)
@@ -43,15 +50,13 @@ def save_json(path, data):
 def get_rate_limit():
     r = requests.get("https://api.github.com/rate_limit", headers=HEADERS)
     r.raise_for_status()
-    core = r.json()["resources"]["core"]
-    search = r.json()["resources"]["search"]
-    return core, search
+    return r.json()["resources"]["core"], r.json()["resources"]["search"]
 
 
 def remaining_ok(min_core=50, min_search=5):
     try:
         core, search = get_rate_limit()
-        logger.debug(f"Rate limit — core: {core['remaining']}, search: {search['remaining']}")
+        logger.info(f"Rate limit — core: {core['remaining']}, search: {search['remaining']}")
         return core["remaining"] >= min_core and search["remaining"] >= min_search
     except Exception as e:
         logger.warning(f"Could not check rate limit: {e}")
@@ -72,8 +77,8 @@ def get_user_languages(username):
             params={"per_page": 30, "sort": "updated"},
         )
         if r.status_code == 403:
-            _, search = get_rate_limit()
-            wait_for_reset(search["reset"])
+            reset = int(r.headers.get("X-RateLimit-Reset", time.time() + 60))
+            wait_for_reset(reset)
             return {}
         r.raise_for_status()
         langs = {}
@@ -94,7 +99,6 @@ def infer_gender(display_name, bio):
         return "male"
     if result in ("female", "mostly_female"):
         return "female"
-    # fallback: scan bio for pronouns
     bio_lower = (bio or "").lower()
     if "she/her" in bio_lower or " she " in bio_lower:
         return "female"
@@ -118,18 +122,17 @@ def search_sa_developers(page=1, per_page=30):
         headers=HEADERS,
         params=params,
     )
-    if r.status_code == 403 or r.status_code == 429:
+    if r.status_code in (403, 429):
         reset = int(r.headers.get("X-RateLimit-Reset", time.time() + 60))
         wait_for_reset(reset)
-        return None, True  # signal: hit limit
+        return None, True
     r.raise_for_status()
-    data = r.json()
-    return data.get("items", []), False
+    return r.json().get("items", []), False
 
 
 def fetch_user_detail(login):
     r = requests.get(f"https://api.github.com/users/{login}", headers=HEADERS)
-    if r.status_code == 403 or r.status_code == 429:
+    if r.status_code in (403, 429):
         reset = int(r.headers.get("X-RateLimit-Reset", time.time() + 60))
         wait_for_reset(reset)
         return None
@@ -138,7 +141,10 @@ def fetch_user_detail(login):
     return r.json()
 
 
-def run_scrape(max_pages=10):
+def run_scrape(max_pages=None):
+    if max_pages is None:
+        max_pages = int(os.getenv("MAX_PAGES_PER_RUN", 5))
+
     progress = load_json(PROGRESS_FILE, {"last_page": 0, "seen_logins": []})
     developers = load_json(DEVELOPERS_FILE, [])
 
@@ -149,7 +155,7 @@ def run_scrape(max_pages=10):
 
     for page in range(start_page, start_page + max_pages):
         if not remaining_ok():
-            logger.warning("Rate limit too low — stopping early and saving progress.")
+            logger.warning("Rate limit too low — stopping early.")
             break
 
         logger.info(f"Fetching search page {page}...")
@@ -180,7 +186,6 @@ def run_scrape(max_pages=10):
                 continue
 
             languages = get_user_languages(login)
-
             gender_val = infer_gender(detail.get("name"), detail.get("bio"))
 
             dev = {
@@ -199,19 +204,21 @@ def run_scrape(max_pages=10):
 
             developers.append(dev)
             seen.add(login)
-            logger.debug(f"  + {login} ({gender_val}) — {list(languages.keys())[:3]}")
-
-            time.sleep(0.5)  # gentle throttle
+            logger.info(f"  + {login} ({gender_val})")
+            time.sleep(0.5)
 
         progress["last_page"] = page
         progress["seen_logins"] = list(seen)
         save_json(PROGRESS_FILE, progress)
         save_json(DEVELOPERS_FILE, developers)
         logger.info(f"Page {page} done. Total devs: {len(developers)}")
-
         time.sleep(1)
 
     save_json(DEVELOPERS_FILE, developers)
     save_json(PROGRESS_FILE, progress)
     logger.info(f"Scrape finished. {len(developers)} total developers saved.")
     return developers
+
+
+if __name__ == "__main__":
+    run_scrape()
