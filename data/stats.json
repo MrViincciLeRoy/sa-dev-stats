@@ -1,158 +1,174 @@
 {
-  "generated_at": "2026-05-25T15:25:25.267087+00:00",
-  "total_developers": 150,
+  "generated_at": "2026-05-25T16:00:43.760431+00:00",
+  "total_developers": 900,
   "gender": {
     "male": {
-      "count": 87,
-      "pct": 58.0
+      "count": 334,
+      "pct": 37.1
     },
     "female": {
-      "count": 5,
-      "pct": 3.3
+      "count": 59,
+      "pct": 6.6
     },
     "unknown": {
-      "count": 58,
-      "pct": 38.7
+      "count": 507,
+      "pct": 56.3
     }
   },
   "top_languages": [
     {
       "language": "JavaScript",
-      "count": 189
-    },
-    {
-      "language": "Python",
-      "count": 112
+      "count": 840
     },
     {
       "language": "HTML",
-      "count": 106
+      "count": 649
+    },
+    {
+      "language": "Python",
+      "count": 522
     },
     {
       "language": "TypeScript",
-      "count": 98
-    },
-    {
-      "language": "Java",
-      "count": 86
-    },
-    {
-      "language": "C#",
-      "count": 86
-    },
-    {
-      "language": "PHP",
-      "count": 61
+      "count": 351
     },
     {
       "language": "CSS",
-      "count": 57
+      "count": 267
     },
     {
-      "language": "C++",
-      "count": 43
+      "language": "Java",
+      "count": 238
+    },
+    {
+      "language": "C#",
+      "count": 198
     },
     {
       "language": "Jupyter Notebook",
-      "count": 31
+      "count": 160
     },
     {
-      "language": "Go",
-      "count": 29
+      "language": "PHP",
+      "count": 149
     },
     {
       "language": "Shell",
-      "count": 26
+      "count": 111
+    },
+    {
+      "language": "C++",
+      "count": 91
+    },
+    {
+      "language": "C",
+      "count": 87
     },
     {
       "language": "Rust",
-      "count": 26
+      "count": 51
     },
     {
-      "language": "Swift",
-      "count": 21
+      "language": "Kotlin",
+      "count": 47
     },
     {
-      "language": "Clojure",
-      "count": 16
+      "language": "Go",
+      "count": 43
     }
   ],
   "top_female_languages": [
     {
-      "language": "Rust",
-      "count": 5
-    },
-    {
       "language": "JavaScript",
-      "count": 4
-    },
-    {
-      "language": "Python",
-      "count": 2
-    },
-    {
-      "language": "C",
-      "count": 2
-    },
-    {
-      "language": "C#",
-      "count": 2
-    },
-    {
-      "language": "TypeScript",
-      "count": 1
-    },
-    {
-      "language": "Reason",
-      "count": 1
+      "count": 63
     },
     {
       "language": "HTML",
-      "count": 1
+      "count": 39
     },
     {
-      "language": "Swift",
-      "count": 1
+      "language": "Python",
+      "count": 35
     },
     {
-      "language": "R",
-      "count": 1
+      "language": "Jupyter Notebook",
+      "count": 28
+    },
+    {
+      "language": "TypeScript",
+      "count": 23
+    },
+    {
+      "language": "Java",
+      "count": 16
+    },
+    {
+      "language": "CSS",
+      "count": 12
+    },
+    {
+      "language": "C",
+      "count": 11
+    },
+    {
+      "language": "Shell",
+      "count": 9
+    },
+    {
+      "language": "C#",
+      "count": 8
     }
   ],
   "province_breakdown": [
     {
       "province": "Other / Unresolved",
-      "count": 71
-    },
-    {
-      "province": "Western Cape",
-      "count": 35
+      "count": 468
     },
     {
       "province": "Gauteng",
-      "count": 29
+      "count": 192
+    },
+    {
+      "province": "Western Cape",
+      "count": 160
     },
     {
       "province": "KwaZulu-Natal",
+      "count": 48
+    },
+    {
+      "province": "Eastern Cape",
       "count": 11
     },
     {
       "province": "Free State",
-      "count": 2
+      "count": 10
     },
     {
       "province": "Limpopo",
-      "count": 1
+      "count": 7
     },
     {
-      "province": "Eastern Cape",
-      "count": 1
+      "province": "Mpumalanga",
+      "count": 2
+    },
+    {
+      "province": "North West",
+      "count": 2
     }
   ],
   "account_age_breakdown": [
     {
+      "range": "1\u20133 years",
+      "count": 184
+    },
+    {
+      "range": "3\u20136 years",
+      "count": 296
+    },
+    {
       "range": "6\u201310 years",
-      "count": 34
+      "count": 304
     },
     {
       "range": "10+ years",
@@ -160,7 +176,7 @@
     }
   ],
   "averages": {
-    "followers": 16.1,
-    "public_repos": 22.7
+    "followers": 5.2,
+    "public_repos": 10.6
   }
 }
