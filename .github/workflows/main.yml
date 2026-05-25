@@ -1,0 +1,38 @@
+name: Scrape SA Dev Stats
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scraper and build stats
+        env:
+          GH_SCRAPER_TOKEN: ${{ secrets.GH_SCRAPER_TOKEN }}
+          MAX_PAGES_PER_RUN: ${{ vars.MAX_PAGES_PER_RUN || '5' }}
+        run: |
+          python scraper.py
+          python build_stats.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/developers.json data/progress.json data/stats.json
+          git diff --cached --quiet || git commit -m "chore: update dev stats [skip ci]"
+          git push
