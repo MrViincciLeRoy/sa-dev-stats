@@ -58,6 +58,30 @@
     gap: 24px;
     flex-wrap: wrap;
   }
+
+  /* NAV */
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 20px 0 0;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+  }
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+    padding: 6px 14px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    transition: all .2s;
+  }
+  nav a:hover { color: var(--accent); border-color: var(--border); }
+  nav a.active { color: var(--accent); border-color: var(--accent); }
+  nav .sep { color: var(--border); }
+
   .eyebrow {
     font-family: var(--font-mono);
     font-size: 11px;
@@ -202,6 +226,7 @@
   .bar-male    { background: var(--accent2); }
   .bar-female  { background: var(--accent3); }
   .bar-unknown { background: var(--muted); }
+  .bar-other   { background: #a78bfa; }
   .gender-pct {
     font-family: var(--font-mono);
     font-size: 12px;
@@ -218,36 +243,96 @@
     flex-shrink: 0;
   }
 
-  #loading {
+  /* ── GENDER DETAIL SECTION ── */
+  .gender-detail-header {
     display: flex;
     align-items: center;
-    gap: 12px;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .gender-select-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .gender-select-label {
     font-family: var(--font-mono);
-    font-size: 13px;
+    font-size: 11px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
     color: var(--muted);
-    padding: 80px 0;
   }
-  .spinner {
-    width: 18px; height: 18px;
-    border: 2px solid var(--border);
-    border-top-color: var(--accent);
-    border-radius: 50%;
-    animation: spin .7s linear infinite;
-  }
-  @keyframes spin { to { transform: rotate(360deg); } }
-
-  #error {
-    display: none;
-    font-family: var(--font-mono);
-    font-size: 13px;
-    color: var(--accent3);
-    background: rgba(240,90,126,.08);
-    border: 1px solid rgba(240,90,126,.25);
-    padding: 20px 24px;
+  select.gender-select {
+    background: var(--card);
+    border: 1px solid var(--border);
     border-radius: 8px;
+    color: var(--heading);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    padding: 8px 32px 8px 14px;
+    outline: none;
+    cursor: pointer;
+    transition: border-color .2s;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%235a7080'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+  }
+  select.gender-select:focus { border-color: var(--accent); }
+  select.gender-select option { background: #111820; }
+
+  .gender-badge-pill {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
   }
 
-  #content { display: none; }
+  .gender-detail-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 600px) { .gender-detail-stats { grid-template-columns: 1fr 1fr; } }
+
+  .gd-stat {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    text-align: center;
+    transition: border-color .2s;
+  }
+  .gd-stat:hover { border-color: #2a3f50; }
+  .gd-stat-val {
+    font-family: var(--font-sans);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--heading);
+    letter-spacing: -.02em;
+    line-height: 1;
+    margin-bottom: 5px;
+  }
+  .gd-stat-lbl {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .gender-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  @media (max-width: 900px) { .gender-detail-grid { grid-template-columns: 1fr; } }
 
   .province-list { display: flex; flex-direction: column; gap: 10px; }
   .province-row  { display: flex; align-items: center; gap: 10px; }
@@ -284,6 +369,46 @@
     flex-shrink: 0;
   }
 
+  /* fade-in when switching gender */
+  .gender-detail-panel {
+    animation: fadeIn .3s ease;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  #loading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--muted);
+    padding: 80px 0;
+  }
+  .spinner {
+    width: 18px; height: 18px;
+    border: 2px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin .7s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  #error {
+    display: none;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--accent3);
+    background: rgba(240,90,126,.08);
+    border: 1px solid rgba(240,90,126,.25);
+    padding: 20px 24px;
+    border-radius: 8px;
+  }
+
+  #content { display: none; }
+
   footer {
     border-top: 1px solid var(--border);
     margin-top: 60px;
@@ -301,6 +426,12 @@
 </head>
 <body>
 <div class="wrap">
+
+  <nav>
+    <a href="index.html" class="active">Dashboard</a>
+    <span class="sep">/</span>
+    <a href="users.html">Developers</a>
+  </nav>
 
   <header>
     <div class="header-left">
@@ -351,18 +482,20 @@
       </div>
     </div>
 
-    <div class="section-title">Female Devs & Account Age</div>
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-title">Top Languages — Female Developers</div>
-        <div class="chart-wrap"><canvas id="chart-female-langs"></canvas></div>
+    <!-- ── GENDER DEEP DIVE ── -->
+    <div class="section-title">Gender Deep Dive</div>
+    <div class="card" style="margin-bottom:20px">
+      <div class="gender-detail-header">
+        <div class="gender-select-wrap">
+          <span class="gender-select-label">Viewing</span>
+          <select class="gender-select" id="gender-picker"></select>
+        </div>
+        <div id="gender-badge-wrap"></div>
       </div>
-      <div class="card">
-        <div class="card-title">Account Age Distribution</div>
-        <div class="chart-wrap"><canvas id="chart-age"></canvas></div>
-      </div>
+      <div id="gender-detail-panel"></div>
     </div>
 
+    <!-- ── GEOGRAPHIC ── -->
     <div class="section-title">Geographic Distribution</div>
     <div class="card" style="margin-bottom:20px">
       <div class="card-title">Province / City Breakdown</div>
@@ -384,7 +517,18 @@ Chart.defaults.color = '#5a7080';
 const ACCENT  = '#00e5a0';
 const ACCENT2 = '#0af';
 const ACCENT3 = '#f05a7e';
+const ACCENT4 = '#a78bfa';
 const SURFACE = '#111820';
+
+// Stable color per gender key
+const GENDER_COLORS = {
+  male:    { fg: ACCENT2,  bg: 'rgba(0,170,255,.12)',   border: 'rgba(0,170,255,.3)',   bar: 'bar-male'    },
+  female:  { fg: ACCENT3,  bg: 'rgba(240,90,126,.12)',  border: 'rgba(240,90,126,.3)',  bar: 'bar-female'  },
+  unknown: { fg: '#5a7080',bg: 'rgba(90,112,128,.12)',  border: 'rgba(90,112,128,.3)',  bar: 'bar-unknown' },
+};
+function genderColor(key) {
+  return GENDER_COLORS[key] || { fg: ACCENT4, bg: 'rgba(167,139,250,.12)', border: 'rgba(167,139,250,.3)', bar: 'bar-other' };
+}
 
 function langColors(n) {
   const palette = [
@@ -419,42 +563,193 @@ function makeBarChart(id, labels, data, colors) {
   });
 }
 
-function makeDoughnut(id, labels, data, colors) {
-  const ctx = document.getElementById(id).getContext('2d');
-  return new Chart(ctx, {
-    type: 'doughnut',
-    data: { labels, datasets: [{ data, backgroundColor: colors, borderColor: SURFACE, borderWidth: 3 }] },
-    options: {
-      cutout: '65%',
-      responsive: true,
-      plugins: {
-        legend: { position: 'bottom', labels: { padding: 16, usePointStyle: true, pointStyleWidth: 10, color: '#c9d1d9', font: { size: 11 } } },
-        tooltip: { backgroundColor: '#0d1117', borderColor: '#1e2d3d', borderWidth: 1, titleColor: '#e6edf3', bodyColor: '#5a7080' },
-      },
-    },
-  });
-}
-
-function renderGenderBars(gender) {
+function renderGenderBars(genderDetail) {
   const container = document.getElementById('gender-bars');
-  [
-    { key: 'male',    label: 'Male',    cls: 'bar-male'    },
-    { key: 'female',  label: 'Female',  cls: 'bar-female'  },
-    { key: 'unknown', label: 'Unknown', cls: 'bar-unknown' },
-  ].forEach(({ key, label, cls }) => {
-    const g = gender[key] || { count: 0, pct: 0 };
+  container.innerHTML = '';
+
+  // Sort: male → female → unknown → everything else
+  const order = ['male', 'female', 'unknown'];
+  const keys = Object.keys(genderDetail);
+  const sorted = [
+    ...order.filter(k => keys.includes(k)),
+    ...keys.filter(k => !order.includes(k)),
+  ];
+
+  sorted.forEach(key => {
+    const g = genderDetail[key];
+    const gc = genderColor(key);
+    const label = key.charAt(0).toUpperCase() + key.slice(1);
     const row = document.createElement('div');
     row.className = 'gender-row';
     row.innerHTML = `
       <div class="gender-label">${label}</div>
-      <div class="gender-bar-track"><div class="gender-bar-fill ${cls}" data-pct="${g.pct}"></div></div>
+      <div class="gender-bar-track"><div class="gender-bar-fill ${gc.bar}" data-pct="${g.pct}"></div></div>
       <div class="gender-pct">${g.pct}%</div>
       <div class="gender-count">${g.count.toLocaleString()}</div>
     `;
     container.appendChild(row);
   });
+
   requestAnimationFrame(() => requestAnimationFrame(() => {
     document.querySelectorAll('.gender-bar-fill').forEach(el => { el.style.width = el.dataset.pct + '%'; });
+  }));
+}
+
+function populateGenderPicker(genderDetail) {
+  const sel = document.getElementById('gender-picker');
+  sel.innerHTML = '';
+  const order = ['male', 'female', 'unknown'];
+  const keys = Object.keys(genderDetail);
+  const sorted = [...order.filter(k => keys.includes(k)), ...keys.filter(k => !order.includes(k))];
+  sorted.forEach(key => {
+    const g = genderDetail[key];
+    const opt = document.createElement('option');
+    opt.value = key;
+    const label = key.charAt(0).toUpperCase() + key.slice(1);
+    opt.textContent = `${label} — ${g.count.toLocaleString()} (${g.pct}%)`;
+    sel.appendChild(opt);
+  });
+}
+
+// Track chart instances so we can destroy before redraw
+let _gdLangChart = null;
+let _gdAgeChart  = null;
+
+function renderGenderDetail(key, genderDetail) {
+  const g = genderDetail[key];
+  if (!g) return;
+  const gc = genderColor(key);
+  const label = key.charAt(0).toUpperCase() + key.slice(1);
+
+  // Badge
+  document.getElementById('gender-badge-wrap').innerHTML = `
+    <span style="
+      font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;
+      text-transform:uppercase;padding:4px 14px;border-radius:20px;
+      background:${gc.bg};color:${gc.fg};border:1px solid ${gc.border}
+    ">${label} · ${g.count.toLocaleString()} devs · ${g.pct}%</span>
+  `;
+
+  const panel = document.getElementById('gender-detail-panel');
+
+  // Destroy old charts
+  if (_gdLangChart) { _gdLangChart.destroy(); _gdLangChart = null; }
+  if (_gdAgeChart)  { _gdAgeChart.destroy();  _gdAgeChart  = null; }
+
+  panel.innerHTML = `
+    <div class="gender-detail-panel">
+      <!-- avg stats row -->
+      <div class="gender-detail-stats">
+        <div class="gd-stat">
+          <div class="gd-stat-val" style="color:${gc.fg}">${g.count.toLocaleString()}</div>
+          <div class="gd-stat-lbl">Developers</div>
+        </div>
+        <div class="gd-stat">
+          <div class="gd-stat-val">${g.averages.followers}</div>
+          <div class="gd-stat-lbl">Avg Followers</div>
+        </div>
+        <div class="gd-stat">
+          <div class="gd-stat-val">${g.averages.public_repos}</div>
+          <div class="gd-stat-lbl">Avg Repos</div>
+        </div>
+        <div class="gd-stat">
+          <div class="gd-stat-val">${g.averages.following}</div>
+          <div class="gd-stat-lbl">Avg Following</div>
+        </div>
+        <div class="gd-stat">
+          <div class="gd-stat-val" style="color:${gc.fg}">${g.pct}%</div>
+          <div class="gd-stat-lbl">Of All Devs</div>
+        </div>
+        <div class="gd-stat">
+          <div class="gd-stat-val">${g.top_languages[0]?.language ?? '—'}</div>
+          <div class="gd-stat-lbl">Top Language</div>
+        </div>
+      </div>
+
+      <!-- charts row -->
+      <div class="gender-detail-grid">
+        <div class="card" style="background:var(--surface)">
+          <div class="card-title">Top Languages</div>
+          <div class="chart-wrap"><canvas id="gd-chart-langs"></canvas></div>
+        </div>
+        <div class="card" style="background:var(--surface)">
+          <div class="card-title">Account Age Distribution</div>
+          <div class="chart-wrap"><canvas id="gd-chart-age"></canvas></div>
+        </div>
+      </div>
+
+      <!-- province breakdown -->
+      <div class="card" style="background:var(--surface)">
+        <div class="card-title">Geographic Distribution</div>
+        <div class="province-list" id="gd-province-list"></div>
+      </div>
+    </div>
+  `;
+
+  // Lang chart
+  if (g.top_languages.length) {
+    const ll = g.top_languages.map(l => l.language);
+    const ld = g.top_languages.map(l => l.count);
+    const ctx = document.getElementById('gd-chart-langs').getContext('2d');
+    _gdLangChart = new Chart(ctx, {
+      type: 'bar',
+      data: { labels: ll, datasets: [{ data: ld, backgroundColor: langColors(ll.length), borderRadius: 4, borderSkipped: false }] },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: '#0d1117', borderColor: '#1e2d3d', borderWidth: 1,
+            titleColor: '#e6edf3', bodyColor: '#5a7080',
+            callbacks: { label: ctx => `  ${ctx.raw.toLocaleString()} repos` },
+          },
+        },
+        scales: {
+          x: { grid: { color: '#1e2d3d' }, ticks: { color: '#5a7080' } },
+          y: { grid: { display: false }, ticks: { color: '#c9d1d9', font: { size: 11 } } },
+        },
+      },
+    });
+  }
+
+  // Age chart
+  if (g.account_age_breakdown.length) {
+    const al = g.account_age_breakdown.map(a => a.range);
+    const ad = g.account_age_breakdown.map(a => a.count);
+    const ctx = document.getElementById('gd-chart-age').getContext('2d');
+    _gdAgeChart = new Chart(ctx, {
+      type: 'bar',
+      data: { labels: al, datasets: [{ data: ad, backgroundColor: langColors(al.length), borderRadius: 6, borderSkipped: false }] },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: { backgroundColor: '#0d1117', borderColor: '#1e2d3d', borderWidth: 1, titleColor: '#e6edf3', bodyColor: '#5a7080' },
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { color: '#c9d1d9', font: { size: 11 } } },
+          y: { grid: { color: '#1e2d3d' }, ticks: { color: '#5a7080' } },
+        },
+      },
+    });
+  }
+
+  // Province bars
+  const provList = document.getElementById('gd-province-list');
+  const maxProv = g.province_breakdown[0]?.count || 1;
+  g.province_breakdown.forEach(({ province, count }) => {
+    const row = document.createElement('div');
+    row.className = 'province-row';
+    row.innerHTML = `
+      <div class="province-name">${province}</div>
+      <div class="province-bar-track"><div class="province-bar-fill" data-pct="${(count / maxProv) * 100}"></div></div>
+      <div class="province-count">${count}</div>
+    `;
+    provList.appendChild(row);
+  });
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    provList.querySelectorAll('.province-bar-fill').forEach(el => { el.style.width = el.dataset.pct + '%'; });
   }));
 }
 
@@ -472,7 +767,7 @@ function renderProvinces(provinces) {
     container.appendChild(row);
   });
   requestAnimationFrame(() => requestAnimationFrame(() => {
-    document.querySelectorAll('.province-bar-fill').forEach(el => { el.style.width = el.dataset.pct + '%'; });
+    document.querySelectorAll('#province-list .province-bar-fill').forEach(el => { el.style.width = el.dataset.pct + '%'; });
   }));
 }
 
@@ -493,39 +788,22 @@ async function loadStats() {
     document.getElementById('stat-female').textContent = `${femaleCount} (${femPct}%)`;
     document.getElementById('stat-top-lang').textContent = s.top_languages?.[0]?.language ?? '—';
 
+    // Top languages chart
     const langLabels = (s.top_languages || []).map(l => l.language);
     const langData   = (s.top_languages || []).map(l => l.count);
     makeBarChart('chart-langs', langLabels, langData, langColors(langLabels.length));
 
-    renderGenderBars(s.gender || {});
+    // Gender bars — use gender_detail if available, else fall back to legacy gender object
+    const genderDetail = s.gender_detail || buildLegacyGenderDetail(s.gender);
+    renderGenderBars(genderDetail);
 
-    if (s.top_female_languages?.length) {
-      const flLabels = s.top_female_languages.map(l => l.language);
-      const flData   = s.top_female_languages.map(l => l.count);
-      makeDoughnut('chart-female-langs', flLabels, flData, langColors(flLabels.length));
-    } else {
-      document.getElementById('chart-female-langs').closest('.card').innerHTML =
-        '<div class="card-title">Top Languages — Female Developers</div><p style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:20px">Not enough data yet.</p>';
-    }
+    // Gender picker + detail panel
+    populateGenderPicker(genderDetail);
+    const picker = document.getElementById('gender-picker');
+    renderGenderDetail(picker.value, genderDetail);
+    picker.addEventListener('change', () => renderGenderDetail(picker.value, genderDetail));
 
-    const ageLabels = (s.account_age_breakdown || []).map(a => a.range);
-    const ageData   = (s.account_age_breakdown || []).map(a => a.count);
-    new Chart(document.getElementById('chart-age').getContext('2d'), {
-      type: 'bar',
-      data: { labels: ageLabels, datasets: [{ data: ageData, backgroundColor: langColors(ageLabels.length), borderRadius: 6, borderSkipped: false }] },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: { display: false },
-          tooltip: { backgroundColor: '#0d1117', borderColor: '#1e2d3d', borderWidth: 1, titleColor: '#e6edf3', bodyColor: '#5a7080' },
-        },
-        scales: {
-          x: { grid: { display: false }, ticks: { color: '#c9d1d9', font: { size: 11 } } },
-          y: { grid: { color: '#1e2d3d' }, ticks: { color: '#5a7080' } },
-        },
-      },
-    });
-
+    // Overall province breakdown
     renderProvinces(s.province_breakdown || []);
 
     document.getElementById('loading').style.display = 'none';
@@ -541,6 +819,25 @@ async function loadStats() {
       Make sure GitHub Actions has run at least once to generate the data file.
     `;
   }
+}
+
+// Fallback: if stats.json was generated by old build_stats.py without gender_detail
+function buildLegacyGenderDetail(gender) {
+  if (!gender) return {};
+  const result = {};
+  ['male', 'female', 'unknown'].forEach(key => {
+    if (gender[key]) {
+      result[key] = {
+        count: gender[key].count,
+        pct: gender[key].pct,
+        averages: { followers: 0, public_repos: 0, following: 0 },
+        top_languages: [],
+        province_breakdown: [],
+        account_age_breakdown: [],
+      };
+    }
+  });
+  return result;
 }
 
 loadStats();

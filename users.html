@@ -22,6 +22,7 @@
     --heading: #e6edf3;
     --font-mono: 'Space Mono', monospace;
     --font-sans: 'Syne', sans-serif;
+    --drawer-w: 420px;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -46,9 +47,19 @@
     z-index: 0;
   }
 
-  .wrap { position: relative; z-index: 1; max-width: 1280px; margin: 0 auto; padding: 0 24px 64px; }
+  /* layout shifts left when drawer opens */
+  .page-wrap {
+    position: relative;
+    z-index: 1;
+    transition: padding-right .35s cubic-bezier(.4,0,.2,1);
+  }
+  .page-wrap.drawer-open { padding-right: var(--drawer-w); }
+  @media (max-width: 900px) {
+    .page-wrap.drawer-open { padding-right: 0; }
+  }
 
-  /* NAV */
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 0 24px 64px; }
+
   nav {
     display: flex;
     align-items: center;
@@ -121,17 +132,13 @@
     .controls { grid-template-columns: 1fr 1fr; }
     .controls .search-wrap { grid-column: 1 / -1; }
   }
-
-  .search-wrap {
-    position: relative;
-  }
+  .search-wrap { position: relative; }
   .search-icon {
     position: absolute;
-    left: 14px;
-    top: 50%;
+    left: 14px; top: 50%;
     transform: translateY(-50%);
     color: var(--muted);
-    font-size: 13px;
+    font-size: 14px;
     pointer-events: none;
   }
   input[type="text"], select {
@@ -149,7 +156,6 @@
   input[type="text"] { padding-left: 36px; }
   input[type="text"]:focus, select:focus { border-color: var(--accent); }
   select option { background: var(--card); }
-
   .btn-clear {
     background: transparent;
     border: 1px solid var(--border);
@@ -166,7 +172,6 @@
   }
   .btn-clear:hover { border-color: var(--accent3); color: var(--accent3); }
 
-  /* RESULTS BAR */
   .results-bar {
     display: flex;
     align-items: center;
@@ -181,7 +186,7 @@
   /* GRID */
   .dev-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 16px;
   }
 
@@ -190,13 +195,11 @@
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 20px;
+    padding: 18px;
     cursor: pointer;
     transition: border-color .2s, background .2s, transform .15s;
     position: relative;
     overflow: hidden;
-    text-decoration: none;
-    display: block;
   }
   .dev-card::before {
     content: '';
@@ -209,17 +212,18 @@
   }
   .dev-card:hover { border-color: #2a3f50; background: var(--card-hover); transform: translateY(-2px); }
   .dev-card:hover::before { opacity: 1; }
+  .dev-card.selected { border-color: var(--accent); background: var(--card-hover); }
+  .dev-card.selected::before { opacity: 1; }
 
   .card-top {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 12px;
+    gap: 10px;
+    margin-bottom: 10px;
   }
   .card-avatar {
-    width: 44px;
-    height: 44px;
+    width: 42px; height: 42px;
     border-radius: 50%;
     border: 2px solid var(--border);
     background: var(--surface);
@@ -228,371 +232,232 @@
   }
   .card-avatar img { width: 100%; height: 100%; object-fit: cover; }
   .avatar-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
     font-family: var(--font-mono);
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 13px; font-weight: 700;
     color: var(--accent);
     background: rgba(0,229,160,.08);
   }
   .card-identity { flex: 1; min-width: 0; }
   .card-name {
     font-family: var(--font-sans);
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 14px; font-weight: 600;
     color: var(--heading);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     margin-bottom: 2px;
   }
-  .card-login {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--accent);
-  }
+  .card-login { font-family: var(--font-mono); font-size: 11px; color: var(--accent); }
   .gender-badge {
-    font-family: var(--font-mono);
-    font-size: 9px;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    padding: 3px 8px;
-    border-radius: 10px;
-    flex-shrink: 0;
+    font-family: var(--font-mono); font-size: 9px;
+    letter-spacing: .1em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 10px; flex-shrink: 0;
   }
-  .gender-male    { background: rgba(0,170,255,.1); color: var(--accent2); border: 1px solid rgba(0,170,255,.2); }
-  .gender-female  { background: rgba(240,90,126,.1); color: var(--accent3); border: 1px solid rgba(240,90,126,.2); }
-  .gender-unknown { background: rgba(90,112,128,.1); color: var(--muted); border: 1px solid rgba(90,112,128,.2); }
+  .gender-male    { background: rgba(0,170,255,.1);   color: var(--accent2); border: 1px solid rgba(0,170,255,.2); }
+  .gender-female  { background: rgba(240,90,126,.1);  color: var(--accent3); border: 1px solid rgba(240,90,126,.2); }
+  .gender-unknown { background: rgba(90,112,128,.1);  color: var(--muted);   border: 1px solid rgba(90,112,128,.2); }
+  .gender-other   { background: rgba(167,139,250,.1); color: #a78bfa;        border: 1px solid rgba(167,139,250,.2); }
 
   .card-location {
-    font-family: var(--font-mono);
-    font-size: 10px;
-    color: var(--muted);
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .card-bio {
-    font-size: 12px;
-    color: var(--text);
-    line-height: 1.5;
-    margin-bottom: 12px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    opacity: .8;
-  }
-
-  .card-langs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    margin-bottom: 14px;
-  }
-  .lang-tag {
-    font-family: var(--font-mono);
-    font-size: 9px;
-    letter-spacing: .08em;
-    padding: 3px 8px;
-    border-radius: 4px;
-    background: rgba(0,229,160,.07);
-    color: var(--accent);
-    border: 1px solid rgba(0,229,160,.15);
-  }
-
-  .card-stats {
-    display: flex;
-    gap: 16px;
-    padding-top: 12px;
-    border-top: 1px solid var(--border);
-  }
-  .stat-item {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-  .stat-val {
-    font-family: var(--font-mono);
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--heading);
-  }
-  .stat-lbl {
-    font-family: var(--font-mono);
-    font-size: 9px;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-
-  /* MODAL */
-  .modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(8,12,16,.85);
-    backdrop-filter: blur(6px);
-    z-index: 100;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-  }
-  .modal-overlay.open { display: flex; }
-
-  .modal {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    width: 100%;
-    max-width: 560px;
-    max-height: 90vh;
-    overflow-y: auto;
-    position: relative;
-    animation: slideUp .25s ease;
-  }
-  @keyframes slideUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  .modal-header {
-    padding: 24px 24px 0;
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    position: relative;
-  }
-  .modal-avatar {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    border: 2px solid var(--border);
-    overflow: hidden;
-    flex-shrink: 0;
-    background: var(--surface);
-  }
-  .modal-avatar img { width: 100%; height: 100%; object-fit: cover; }
-  .modal-avatar-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-mono);
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--accent);
-    background: rgba(0,229,160,.08);
-  }
-  .modal-identity { flex: 1; }
-  .modal-name {
-    font-family: var(--font-sans);
-    font-size: 20px;
-    font-weight: 800;
-    color: var(--heading);
-    margin-bottom: 4px;
-  }
-  .modal-login {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--accent);
+    font-family: var(--font-mono); font-size: 10px; color: var(--muted);
     margin-bottom: 8px;
   }
-  .modal-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: transparent;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    color: var(--muted);
-    font-size: 18px;
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all .2s;
-    line-height: 1;
-  }
-  .modal-close:hover { border-color: var(--accent3); color: var(--accent3); }
-
-  .modal-body { padding: 20px 24px 24px; }
-
-  .modal-section { margin-bottom: 20px; }
-  .modal-section-title {
-    font-family: var(--font-mono);
-    font-size: 10px;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    color: var(--muted);
+  .card-bio {
+    font-size: 12px; color: var(--text); line-height: 1.5;
     margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    opacity: .8;
   }
-  .modal-section-title::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--border);
+  .card-langs { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 12px; }
+  .lang-tag {
+    font-family: var(--font-mono); font-size: 9px; letter-spacing: .08em;
+    padding: 2px 7px; border-radius: 4px;
+    background: rgba(0,229,160,.07); color: var(--accent); border: 1px solid rgba(0,229,160,.15);
   }
-
-  .modal-stats-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+  .card-stats {
+    display: flex; gap: 14px;
+    padding-top: 10px; border-top: 1px solid var(--border);
   }
-  .modal-stat {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 12px;
-    text-align: center;
-  }
-  .modal-stat-val {
-    font-family: var(--font-mono);
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--heading);
-    margin-bottom: 4px;
-  }
-  .modal-stat-lbl {
-    font-family: var(--font-mono);
-    font-size: 9px;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-
-  .modal-bio {
-    font-size: 13px;
-    color: var(--text);
-    line-height: 1.6;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 14px;
-  }
-
-  .modal-langs { display: flex; flex-wrap: wrap; gap: 6px; }
-  .modal-lang-tag {
-    font-family: var(--font-mono);
-    font-size: 10px;
-    padding: 5px 10px;
-    border-radius: 6px;
-    background: rgba(0,229,160,.07);
-    color: var(--accent);
-    border: 1px solid rgba(0,229,160,.15);
-  }
-  .modal-lang-tag span {
-    color: var(--muted);
-    margin-left: 4px;
-  }
-
-  .modal-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .modal-meta-row {
-    display: flex;
-    gap: 10px;
-    font-family: var(--font-mono);
-    font-size: 11px;
-  }
-  .modal-meta-key { color: var(--muted); width: 100px; flex-shrink: 0; }
-  .modal-meta-val { color: var(--text); }
-
-  .btn-github {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    width: 100%;
-    padding: 12px;
-    background: rgba(0,229,160,.08);
-    border: 1px solid rgba(0,229,160,.3);
-    border-radius: 8px;
-    color: var(--accent);
-    font-family: var(--font-mono);
-    font-size: 12px;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: all .2s;
-    margin-top: 4px;
-  }
-  .btn-github:hover { background: rgba(0,229,160,.15); border-color: var(--accent); }
+  .stat-item { display: flex; flex-direction: column; gap: 2px; }
+  .stat-val { font-family: var(--font-mono); font-size: 13px; font-weight: 700; color: var(--heading); }
+  .stat-lbl { font-family: var(--font-mono); font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
 
   /* PAGINATION */
   .pagination {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 40px;
-    font-family: var(--font-mono);
-    font-size: 12px;
+    display: flex; align-items: center; justify-content: center;
+    gap: 8px; margin-top: 40px;
+    font-family: var(--font-mono); font-size: 12px;
   }
   .page-btn {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    color: var(--text);
-    padding: 8px 14px;
-    cursor: pointer;
-    transition: all .2s;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 6px; color: var(--text);
+    padding: 8px 14px; cursor: pointer; transition: all .2s;
   }
   .page-btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
   .page-btn:disabled { opacity: .3; cursor: default; }
   .page-btn.active { background: rgba(0,229,160,.1); border-color: var(--accent); color: var(--accent); }
   .page-info { color: var(--muted); padding: 0 8px; }
 
-  /* EMPTY / LOADING */
   .state-msg {
-    text-align: center;
-    padding: 80px 0;
-    font-family: var(--font-mono);
-    font-size: 13px;
-    color: var(--muted);
+    text-align: center; padding: 80px 0;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
   }
   .spinner {
     width: 18px; height: 18px;
-    border: 2px solid var(--border);
-    border-top-color: var(--accent);
+    border: 2px solid var(--border); border-top-color: var(--accent);
     border-radius: 50%;
     animation: spin .7s linear infinite;
-    display: inline-block;
-    margin-right: 10px;
-    vertical-align: middle;
+    display: inline-block; margin-right: 10px; vertical-align: middle;
   }
   @keyframes spin { to { transform: rotate(360deg); } }
 
-  footer {
-    border-top: 1px solid var(--border);
-    margin-top: 60px;
-    padding-top: 24px;
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--muted);
+  /* ── DRAWER ── */
+  .drawer-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(8,12,16,.5);
+    z-index: 50;
+    backdrop-filter: blur(2px);
+  }
+  .drawer-overlay.open { display: block; }
+  @media (min-width: 901px) { .drawer-overlay { display: none !important; } }
+
+  .drawer {
+    position: fixed;
+    top: 0; right: 0; bottom: 0;
+    width: var(--drawer-w);
+    max-width: 100vw;
+    background: var(--card);
+    border-left: 1px solid var(--border);
+    z-index: 100;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 8px;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform .35s cubic-bezier(.4,0,.2,1);
+    overflow: hidden;
+  }
+  .drawer.open { transform: translateX(0); }
+
+  .drawer-header {
+    padding: 20px 20px 16px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    flex-shrink: 0;
+  }
+  .drawer-avatar {
+    width: 56px; height: 56px;
+    border-radius: 50%; border: 2px solid var(--border);
+    overflow: hidden; flex-shrink: 0;
+    background: var(--surface);
+  }
+  .drawer-avatar img { width: 100%; height: 100%; object-fit: cover; }
+  .drawer-avatar-placeholder {
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-mono); font-size: 20px; font-weight: 700;
+    color: var(--accent); background: rgba(0,229,160,.08);
+  }
+  .drawer-identity { flex: 1; min-width: 0; }
+  .drawer-name {
+    font-family: var(--font-sans); font-size: 17px; font-weight: 800;
+    color: var(--heading); letter-spacing: -.01em;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    margin-bottom: 3px;
+  }
+  .drawer-login { font-family: var(--font-mono); font-size: 12px; color: var(--accent); margin-bottom: 6px; }
+  .drawer-location { font-family: var(--font-mono); font-size: 10px; color: var(--muted); }
+  .drawer-close {
+    background: transparent; border: 1px solid var(--border);
+    border-radius: 6px; color: var(--muted);
+    font-size: 16px; width: 30px; height: 30px;
+    cursor: pointer; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    transition: all .2s; line-height: 1;
+  }
+  .drawer-close:hover { border-color: var(--accent3); color: var(--accent3); }
+
+  .drawer-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+  .drawer-body::-webkit-scrollbar { width: 4px; }
+  .drawer-body::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+  .drawer-section { margin-bottom: 20px; }
+  .drawer-section-title {
+    font-family: var(--font-mono); font-size: 10px;
+    letter-spacing: .2em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 10px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .drawer-section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  .drawer-stats {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+  .drawer-stat {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; padding: 10px 12px; text-align: center;
+  }
+  .drawer-stat-val { font-family: var(--font-mono); font-size: 16px; font-weight: 700; color: var(--heading); margin-bottom: 3px; }
+  .drawer-stat-lbl { font-family: var(--font-mono); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+
+  .drawer-bio {
+    font-size: 13px; color: var(--text); line-height: 1.6;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; padding: 12px;
+  }
+
+  .drawer-langs { display: flex; flex-wrap: wrap; gap: 6px; }
+  .drawer-lang-tag {
+    font-family: var(--font-mono); font-size: 10px;
+    padding: 4px 10px; border-radius: 6px;
+    background: rgba(0,229,160,.07); color: var(--accent); border: 1px solid rgba(0,229,160,.15);
+  }
+  .drawer-lang-tag span { color: var(--muted); margin-left: 4px; }
+
+  .drawer-meta { display: flex; flex-direction: column; gap: 8px; }
+  .drawer-meta-row { display: flex; gap: 10px; font-family: var(--font-mono); font-size: 11px; }
+  .drawer-meta-key { color: var(--muted); width: 110px; flex-shrink: 0; }
+  .drawer-meta-val { color: var(--text); }
+
+  .btn-github {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    width: 100%; padding: 12px;
+    background: rgba(0,229,160,.08); border: 1px solid rgba(0,229,160,.3);
+    border-radius: 8px; color: var(--accent);
+    font-family: var(--font-mono); font-size: 12px;
+    letter-spacing: .1em; text-transform: uppercase;
+    text-decoration: none; transition: all .2s; margin-top: 4px;
+  }
+  .btn-github:hover { background: rgba(0,229,160,.15); border-color: var(--accent); }
+
+  /* slide-in animation for drawer content */
+  .drawer-content-anim {
+    animation: drawerFadeIn .25s ease;
+  }
+  @keyframes drawerFadeIn {
+    from { opacity: 0; transform: translateX(12px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+
+  footer {
+    border-top: 1px solid var(--border); margin-top: 60px; padding-top: 24px;
+    font-family: var(--font-mono); font-size: 11px; color: var(--muted);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
   }
   footer a { color: var(--accent); text-decoration: none; }
 </style>
 </head>
 <body>
+<div class="page-wrap" id="page-wrap">
 <div class="wrap">
 
   <nav>
@@ -609,7 +474,6 @@
     <div class="meta-pill">Total loaded: <span id="total-count">—</span></div>
   </header>
 
-  <!-- CONTROLS -->
   <div class="controls">
     <div class="search-wrap">
       <span class="search-icon">⌕</span>
@@ -620,9 +484,6 @@
     </select>
     <select id="filter-gender">
       <option value="">All Genders</option>
-      <option value="male">Male</option>
-      <option value="female">Female</option>
-      <option value="unknown">Unknown</option>
     </select>
     <select id="sort-by">
       <option value="followers">Sort: Followers</option>
@@ -644,16 +505,21 @@
   <div id="dev-grid" class="dev-grid" style="display:none"></div>
   <div class="pagination" id="pagination"></div>
 
-  <!-- MODAL -->
-  <div class="modal-overlay" id="modal" onclick="closeModal(event)">
-    <div class="modal" id="modal-content"></div>
-  </div>
-
   <footer>
     <span>SA Dev Stats · Public GitHub data only</span>
     <span><a href="index.html">← Back to Dashboard</a></span>
   </footer>
 
+</div>
+</div>
+
+<!-- Mobile overlay (closes drawer on tap) -->
+<div class="drawer-overlay" id="drawer-overlay" onclick="closeDrawer()"></div>
+
+<!-- DRAWER -->
+<div class="drawer" id="drawer">
+  <div class="drawer-header" id="drawer-header"></div>
+  <div class="drawer-body" id="drawer-body"></div>
 </div>
 
 <script>
@@ -661,6 +527,7 @@ const PER_PAGE = 30;
 let allDevs = [];
 let filtered = [];
 let currentPage = 1;
+let activeLogin = null;
 
 async function loadDevs() {
   try {
@@ -668,7 +535,7 @@ async function loadDevs() {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     allDevs = await res.json();
     document.getElementById('total-count').textContent = allDevs.length.toLocaleString();
-    buildLangFilter();
+    buildFilters();
     applyFilters();
     document.getElementById('loading').style.display = 'none';
     document.getElementById('dev-grid').style.display = 'grid';
@@ -680,30 +547,40 @@ async function loadDevs() {
   }
 }
 
-function buildLangFilter() {
+function buildFilters() {
+  // Languages
   const langCount = {};
-  allDevs.forEach(d => {
-    Object.keys(d.languages || {}).forEach(l => { langCount[l] = (langCount[l] || 0) + 1; });
-  });
-  const sorted = Object.entries(langCount).sort((a,b) => b[1]-a[1]).slice(0, 30);
-  const sel = document.getElementById('filter-lang');
-  sorted.forEach(([lang]) => {
+  allDevs.forEach(d => Object.keys(d.languages || {}).forEach(l => { langCount[l] = (langCount[l] || 0) + 1; }));
+  const sortedLangs = Object.entries(langCount).sort((a,b) => b[1]-a[1]).slice(0, 30);
+  const langSel = document.getElementById('filter-lang');
+  sortedLangs.forEach(([lang]) => {
     const opt = document.createElement('option');
-    opt.value = lang;
-    opt.textContent = lang;
-    sel.appendChild(opt);
+    opt.value = lang; opt.textContent = lang;
+    langSel.appendChild(opt);
+  });
+
+  // Genders — dynamic from data
+  const genders = [...new Set(allDevs.map(d => d.gender || 'unknown'))].sort();
+  const order = ['male', 'female', 'unknown'];
+  const sorted = [...order.filter(g => genders.includes(g)), ...genders.filter(g => !order.includes(g))];
+  const gSel = document.getElementById('filter-gender');
+  sorted.forEach(g => {
+    const opt = document.createElement('option');
+    opt.value = g;
+    opt.textContent = g.charAt(0).toUpperCase() + g.slice(1);
+    gSel.appendChild(opt);
   });
 }
 
 function applyFilters() {
-  const q = document.getElementById('search').value.toLowerCase().trim();
-  const lang = document.getElementById('filter-lang').value;
+  const q      = document.getElementById('search').value.toLowerCase().trim();
+  const lang   = document.getElementById('filter-lang').value;
   const gender = document.getElementById('filter-gender').value;
-  const sort = document.getElementById('sort-by').value;
+  const sort   = document.getElementById('sort-by').value;
 
   filtered = allDevs.filter(d => {
     if (lang && !Object.keys(d.languages || {}).includes(lang)) return false;
-    if (gender && d.gender !== gender) return false;
+    if (gender && (d.gender || 'unknown') !== gender) return false;
     if (q) {
       const hay = [d.login, d.name, d.bio, d.location].filter(Boolean).join(' ').toLowerCase();
       if (!hay.includes(q)) return false;
@@ -712,11 +589,11 @@ function applyFilters() {
   });
 
   filtered.sort((a, b) => {
-    if (sort === 'followers')      return (b.followers || 0) - (a.followers || 0);
-    if (sort === 'public_repos')   return (b.public_repos || 0) - (a.public_repos || 0);
-    if (sort === 'created_at_asc') return new Date(a.created_at) - new Date(b.created_at);
-    if (sort === 'created_at_desc')return new Date(b.created_at) - new Date(a.created_at);
-    if (sort === 'login')          return (a.login || '').localeCompare(b.login || '');
+    if (sort === 'followers')       return (b.followers || 0) - (a.followers || 0);
+    if (sort === 'public_repos')    return (b.public_repos || 0) - (a.public_repos || 0);
+    if (sort === 'created_at_asc')  return new Date(a.created_at) - new Date(b.created_at);
+    if (sort === 'created_at_desc') return new Date(b.created_at) - new Date(a.created_at);
+    if (sort === 'login')           return (a.login || '').localeCompare(b.login || '');
     return 0;
   });
 
@@ -742,34 +619,41 @@ function render() {
   renderPagination();
 }
 
+function genderClass(g) {
+  if (g === 'male') return 'gender-male';
+  if (g === 'female') return 'gender-female';
+  if (!g || g === 'unknown') return 'gender-unknown';
+  return 'gender-other';
+}
+
 function makeCard(dev) {
   const card = document.createElement('div');
-  card.className = 'dev-card';
-  card.onclick = () => openModal(dev);
+  card.className = 'dev-card' + (dev.login === activeLogin ? ' selected' : '');
+  card.dataset.login = dev.login;
+  card.onclick = () => openDrawer(dev);
 
   const langs = Object.entries(dev.languages || {})
-    .sort((a,b) => b[1]-a[1])
-    .slice(0, 4)
-    .map(([l]) => `<span class="lang-tag">${l}</span>`)
-    .join('');
-
+    .sort((a,b) => b[1]-a[1]).slice(0, 4)
+    .map(([l]) => `<span class="lang-tag">${l}</span>`).join('');
   const initials = (dev.name || dev.login || '?').slice(0,2).toUpperCase();
   const avatarUrl = `https://avatars.githubusercontent.com/${dev.login}?s=80`;
+  const gLabel = dev.gender || 'unknown';
 
   card.innerHTML = `
     <div class="card-top">
       <div class="card-avatar">
-        <img src="${avatarUrl}" alt="" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\\"avatar-placeholder\\">${initials}</div>'" />
+        <img src="${avatarUrl}" alt="" loading="lazy"
+          onerror="this.parentElement.innerHTML='<div class=\\"avatar-placeholder\\">${initials}</div>'" />
       </div>
       <div class="card-identity">
-        <div class="card-name">${dev.name || dev.login}</div>
+        <div class="card-name">${escHtml(dev.name || dev.login)}</div>
         <div class="card-login">@${dev.login}</div>
       </div>
-      <div class="gender-badge gender-${dev.gender || 'unknown'}">${dev.gender || '?'}</div>
+      <div class="gender-badge ${genderClass(gLabel)}">${gLabel}</div>
     </div>
-    ${dev.location ? `<div class="card-location">📍 ${dev.location}</div>` : ''}
-    ${dev.bio ? `<div class="card-bio">${escHtml(dev.bio)}</div>` : ''}
-    ${langs ? `<div class="card-langs">${langs}</div>` : ''}
+    ${dev.location ? `<div class="card-location">📍 ${escHtml(dev.location)}</div>` : ''}
+    ${dev.bio     ? `<div class="card-bio">${escHtml(dev.bio)}</div>` : ''}
+    ${langs       ? `<div class="card-langs">${langs}</div>` : ''}
     <div class="card-stats">
       <div class="stat-item"><div class="stat-val">${fmt(dev.followers)}</div><div class="stat-lbl">Followers</div></div>
       <div class="stat-item"><div class="stat-val">${fmt(dev.public_repos)}</div><div class="stat-lbl">Repos</div></div>
@@ -779,61 +663,71 @@ function makeCard(dev) {
   return card;
 }
 
-function openModal(dev) {
+function openDrawer(dev) {
+  activeLogin = dev.login;
+
+  // Highlight selected card
+  document.querySelectorAll('.dev-card').forEach(c => {
+    c.classList.toggle('selected', c.dataset.login === dev.login);
+  });
+
   const initials = (dev.name || dev.login || '?').slice(0,2).toUpperCase();
   const avatarUrl = `https://avatars.githubusercontent.com/${dev.login}?s=120`;
-
-  const langs = Object.entries(dev.languages || {})
-    .sort((a,b) => b[1]-a[1])
-    .map(([l, c]) => `<span class="modal-lang-tag">${l}<span>×${c}</span></span>`)
-    .join('');
-
+  const gLabel = dev.gender || 'unknown';
   const joinedDate = dev.created_at
     ? new Date(dev.created_at).toLocaleDateString('en-ZA', { year:'numeric', month:'long', day:'numeric' })
     : 'Unknown';
 
-  document.getElementById('modal-content').innerHTML = `
-    <div class="modal-header">
-      <div class="modal-avatar">
-        <img src="${avatarUrl}" alt="" onerror="this.parentElement.innerHTML='<div class=\\"modal-avatar-placeholder\\">${initials}</div>'" />
-      </div>
-      <div class="modal-identity">
-        <div class="modal-name">${dev.name || dev.login}</div>
-        <div class="modal-login">@${dev.login}</div>
-        ${dev.location ? `<div style="font-family:var(--font-mono);font-size:11px;color:var(--muted)">📍 ${dev.location}</div>` : ''}
-      </div>
-      <button class="modal-close" onclick="closeModalDirect()">✕</button>
+  // Header
+  document.getElementById('drawer-header').innerHTML = `
+    <div class="drawer-avatar">
+      <img src="${avatarUrl}" alt=""
+        onerror="this.parentElement.innerHTML='<div class=\\"drawer-avatar-placeholder\\">${initials}</div>'" />
     </div>
-    <div class="modal-body">
+    <div class="drawer-identity">
+      <div class="drawer-name">${escHtml(dev.name || dev.login)}</div>
+      <div class="drawer-login">@${dev.login}</div>
+      ${dev.location ? `<div class="drawer-location">📍 ${escHtml(dev.location)}</div>` : ''}
+    </div>
+    <button class="drawer-close" onclick="closeDrawer()">✕</button>
+  `;
 
-      <div class="modal-section">
-        <div class="modal-section-title">Stats</div>
-        <div class="modal-stats-grid">
-          <div class="modal-stat"><div class="modal-stat-val" style="color:var(--accent2)">${fmt(dev.followers)}</div><div class="modal-stat-lbl">Followers</div></div>
-          <div class="modal-stat"><div class="modal-stat-val">${fmt(dev.public_repos)}</div><div class="modal-stat-lbl">Repos</div></div>
-          <div class="modal-stat"><div class="modal-stat-val">${fmt(dev.following)}</div><div class="modal-stat-lbl">Following</div></div>
+  // Body
+  const langs = Object.entries(dev.languages || {})
+    .sort((a,b) => b[1]-a[1])
+    .map(([l, c]) => `<span class="drawer-lang-tag">${l}<span>×${c}</span></span>`)
+    .join('');
+
+  document.getElementById('drawer-body').innerHTML = `
+    <div class="drawer-content-anim">
+      <div class="drawer-section">
+        <div class="drawer-section-title">Stats</div>
+        <div class="drawer-stats">
+          <div class="drawer-stat"><div class="drawer-stat-val" style="color:var(--accent2)">${fmt(dev.followers)}</div><div class="drawer-stat-lbl">Followers</div></div>
+          <div class="drawer-stat"><div class="drawer-stat-val">${fmt(dev.public_repos)}</div><div class="drawer-stat-lbl">Repos</div></div>
+          <div class="drawer-stat"><div class="drawer-stat-val">${fmt(dev.following)}</div><div class="drawer-stat-lbl">Following</div></div>
         </div>
       </div>
 
       ${dev.bio ? `
-      <div class="modal-section">
-        <div class="modal-section-title">Bio</div>
-        <div class="modal-bio">${escHtml(dev.bio)}</div>
+      <div class="drawer-section">
+        <div class="drawer-section-title">Bio</div>
+        <div class="drawer-bio">${escHtml(dev.bio)}</div>
       </div>` : ''}
 
       ${langs ? `
-      <div class="modal-section">
-        <div class="modal-section-title">Languages</div>
-        <div class="modal-langs">${langs}</div>
+      <div class="drawer-section">
+        <div class="drawer-section-title">Languages</div>
+        <div class="drawer-langs">${langs}</div>
       </div>` : ''}
 
-      <div class="modal-section">
-        <div class="modal-section-title">Info</div>
-        <div class="modal-meta">
-          <div class="modal-meta-row"><span class="modal-meta-key">Gender</span><span class="modal-meta-val">${dev.gender || 'unknown'}</span></div>
-          <div class="modal-meta-row"><span class="modal-meta-key">Joined GitHub</span><span class="modal-meta-val">${joinedDate}</span></div>
-          <div class="modal-meta-row"><span class="modal-meta-key">Tenure</span><span class="modal-meta-val">${accountAge(dev.created_at)}</span></div>
-          <div class="modal-meta-row"><span class="modal-meta-key">Scraped</span><span class="modal-meta-val">${dev.scraped_at ? new Date(dev.scraped_at).toLocaleDateString('en-ZA') : '—'}</span></div>
+      <div class="drawer-section">
+        <div class="drawer-section-title">Profile Info</div>
+        <div class="drawer-meta">
+          <div class="drawer-meta-row"><span class="drawer-meta-key">Gender</span><span class="drawer-meta-val"><span class="gender-badge ${genderClass(gLabel)}" style="font-size:10px">${gLabel}</span></span></div>
+          <div class="drawer-meta-row"><span class="drawer-meta-key">Joined GitHub</span><span class="drawer-meta-val">${joinedDate}</span></div>
+          <div class="drawer-meta-row"><span class="drawer-meta-key">Account Age</span><span class="drawer-meta-val">${accountAge(dev.created_at)}</span></div>
+          <div class="drawer-meta-row"><span class="drawer-meta-key">Scraped</span><span class="drawer-meta-val">${dev.scraped_at ? new Date(dev.scraped_at).toLocaleDateString('en-ZA') : '—'}</span></div>
         </div>
       </div>
 
@@ -842,18 +736,21 @@ function openModal(dev) {
       </a>
     </div>
   `;
-  document.getElementById('modal').classList.add('open');
-  document.body.style.overflow = 'hidden';
+
+  document.getElementById('drawer').classList.add('open');
+  document.getElementById('drawer-overlay').classList.add('open');
+  document.getElementById('page-wrap').classList.add('drawer-open');
 }
 
-function closeModal(e) {
-  if (e.target === document.getElementById('modal')) closeModalDirect();
+function closeDrawer() {
+  activeLogin = null;
+  document.getElementById('drawer').classList.remove('open');
+  document.getElementById('drawer-overlay').classList.remove('open');
+  document.getElementById('page-wrap').classList.remove('drawer-open');
+  document.querySelectorAll('.dev-card').forEach(c => c.classList.remove('selected'));
 }
-function closeModalDirect() {
-  document.getElementById('modal').classList.remove('open');
-  document.body.style.overflow = '';
-}
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
 
 function renderPagination() {
   const total = Math.ceil(filtered.length / PER_PAGE);
@@ -864,18 +761,15 @@ function renderPagination() {
   document.getElementById('page-indicator').textContent = `Page ${currentPage} of ${total}`;
 
   const prev = document.createElement('button');
-  prev.className = 'page-btn';
-  prev.textContent = '← Prev';
+  prev.className = 'page-btn'; prev.textContent = '← Prev';
   prev.disabled = currentPage === 1;
   prev.onclick = () => { currentPage--; render(); window.scrollTo(0,0); };
   pag.appendChild(prev);
 
-  const range = pageRange(currentPage, total);
-  range.forEach(p => {
+  pageRange(currentPage, total).forEach(p => {
     if (p === '…') {
       const span = document.createElement('span');
-      span.className = 'page-info';
-      span.textContent = '…';
+      span.className = 'page-info'; span.textContent = '…';
       pag.appendChild(span);
     } else {
       const btn = document.createElement('button');
@@ -887,8 +781,7 @@ function renderPagination() {
   });
 
   const next = document.createElement('button');
-  next.className = 'page-btn';
-  next.textContent = 'Next →';
+  next.className = 'page-btn'; next.textContent = 'Next →';
   next.disabled = currentPage === total;
   next.onclick = () => { currentPage++; render(); window.scrollTo(0,0); };
   pag.appendChild(next);
@@ -896,8 +789,7 @@ function renderPagination() {
 
 function pageRange(cur, total) {
   if (total <= 7) return Array.from({length: total}, (_, i) => i + 1);
-  const pages = [];
-  pages.push(1);
+  const pages = [1];
   if (cur > 3) pages.push('…');
   for (let i = Math.max(2, cur-1); i <= Math.min(total-1, cur+1); i++) pages.push(i);
   if (cur < total - 2) pages.push('…');
@@ -918,18 +810,14 @@ function fmt(n) {
   if (n >= 1000) return (n/1000).toFixed(1) + 'k';
   return n.toString();
 }
-
 function accountAge(created_at) {
   if (!created_at) return '—';
-  const years = ((Date.now() - new Date(created_at)) / (1000*60*60*24*365)).toFixed(1);
-  return years + 'y';
+  return ((Date.now() - new Date(created_at)) / (1000*60*60*24*365)).toFixed(1) + 'y';
 }
-
 function escHtml(str) {
   return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-// debounce search
 let searchTimer;
 document.getElementById('search').addEventListener('input', () => {
   clearTimeout(searchTimer);
