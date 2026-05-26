@@ -1,87 +1,95 @@
 {
-  "generated_at": "2026-05-26T02:42:00.350478+00:00",
-  "total_developers": 2375,
+  "generated_at": "2026-05-26T09:58:49.393913+00:00",
+  "total_developers": 3100,
   "gender": {
     "male": {
-      "count": 1178,
+      "count": 1538,
       "pct": 49.6
     },
     "female": {
-      "count": 175,
-      "pct": 7.4
+      "count": 249,
+      "pct": 8.0
     },
     "unknown": {
-      "count": 1022,
-      "pct": 43.0
+      "count": 1313,
+      "pct": 42.4
     }
   },
   "gender_detail": {
     "female": {
-      "count": 175,
-      "pct": 7.4,
+      "count": 249,
+      "pct": 8.0,
       "averages": {
-        "followers": 6.1,
-        "public_repos": 10.0,
-        "following": 5.0
+        "followers": 5.0,
+        "public_repos": 9.3,
+        "following": 4.4
       },
       "top_languages": [
         {
           "language": "JavaScript",
-          "count": 137
+          "count": 218
         },
         {
           "language": "HTML",
-          "count": 97
+          "count": 141
         },
         {
           "language": "Python",
-          "count": 89
+          "count": 108
         },
         {
           "language": "TypeScript",
-          "count": 75
+          "count": 87
         },
         {
           "language": "Java",
-          "count": 51
-        },
-        {
-          "language": "Jupyter Notebook",
-          "count": 38
-        },
-        {
-          "language": "C#",
-          "count": 32
+          "count": 67
         },
         {
           "language": "CSS",
-          "count": 31
+          "count": 61
         },
         {
-          "language": "PHP",
-          "count": 24
+          "language": "Jupyter Notebook",
+          "count": 54
         },
         {
           "language": "C",
-          "count": 21
+          "count": 53
+        },
+        {
+          "language": "C#",
+          "count": 50
+        },
+        {
+          "language": "PHP",
+          "count": 38
         }
       ],
       "province_breakdown": [
         {
           "province": "Other / Unresolved",
-          "count": 84
+          "count": 119
         },
         {
           "province": "Western Cape",
-          "count": 50
+          "count": 74
         },
         {
           "province": "Gauteng",
-          "count": 37
+          "count": 46
         },
         {
           "province": "KwaZulu-Natal",
-          "count": 4
+          "count": 8
+        },
+        {
+          "province": "Eastern Cape",
+          "count": 1
+        },
+        {
+          "province": "North West",
+          "count": 1
         }
       ],
       "account_age_breakdown": [
@@ -95,199 +103,199 @@
         },
         {
           "range": "6\u201310 years",
-          "count": 21
+          "count": 74
         },
         {
           "range": "10+ years",
-          "count": 120
+          "count": 141
         }
       ]
     },
     "male": {
-      "count": 1178,
+      "count": 1538,
       "pct": 49.6,
       "averages": {
-        "followers": 9.0,
-        "public_repos": 14.2,
-        "following": 7.2
+        "followers": 7.5,
+        "public_repos": 13.3,
+        "following": 6.7
       },
       "top_languages": [
         {
           "language": "JavaScript",
-          "count": 1247
+          "count": 1624
         },
         {
           "language": "Python",
-          "count": 770
+          "count": 1039
         },
         {
           "language": "TypeScript",
-          "count": 682
-        },
-        {
-          "language": "C#",
-          "count": 601
+          "count": 873
         },
         {
           "language": "HTML",
-          "count": 567
+          "count": 756
+        },
+        {
+          "language": "C#",
+          "count": 722
         },
         {
           "language": "Java",
-          "count": 529
+          "count": 705
         },
         {
           "language": "PHP",
-          "count": 363
-        },
-        {
-          "language": "C++",
-          "count": 240
+          "count": 418
         },
         {
           "language": "CSS",
-          "count": 228
+          "count": 308
+        },
+        {
+          "language": "C++",
+          "count": 293
         },
         {
           "language": "Shell",
-          "count": 217
+          "count": 244
         }
       ],
       "province_breakdown": [
         {
           "province": "Other / Unresolved",
-          "count": 574
+          "count": 742
         },
         {
           "province": "Western Cape",
-          "count": 275
+          "count": 351
         },
         {
           "province": "Gauteng",
-          "count": 245
+          "count": 339
         },
         {
           "province": "KwaZulu-Natal",
-          "count": 57
+          "count": 66
         },
         {
           "province": "Eastern Cape",
-          "count": 13
+          "count": 19
         },
         {
           "province": "Mpumalanga",
-          "count": 5
+          "count": 6
         },
         {
           "province": "Free State",
-          "count": 3
-        },
-        {
-          "province": "Limpopo",
-          "count": 3
+          "count": 5
         },
         {
           "province": "North West",
-          "count": 2
+          "count": 4
+        },
+        {
+          "province": "Limpopo",
+          "count": 4
         },
         {
           "province": "Northern Cape",
-          "count": 1
+          "count": 2
         }
       ],
       "account_age_breakdown": [
         {
           "range": "1\u20133 years",
-          "count": 48
+          "count": 47
         },
         {
           "range": "3\u20136 years",
-          "count": 101
+          "count": 102
         },
         {
           "range": "6\u201310 years",
-          "count": 120
+          "count": 350
         },
         {
           "range": "10+ years",
-          "count": 909
+          "count": 1039
         }
       ]
     },
     "unknown": {
-      "count": 1022,
-      "pct": 43.0,
+      "count": 1313,
+      "pct": 42.4,
       "averages": {
-        "followers": 4.4,
-        "public_repos": 11.4,
-        "following": 5.6
+        "followers": 3.9,
+        "public_repos": 11.8,
+        "following": 5.4
       },
       "top_languages": [
         {
           "language": "JavaScript",
-          "count": 993
+          "count": 1217
         },
         {
           "language": "HTML",
-          "count": 601
+          "count": 749
         },
         {
           "language": "Python",
-          "count": 551
+          "count": 686
         },
         {
           "language": "Java",
-          "count": 466
+          "count": 585
         },
         {
           "language": "TypeScript",
-          "count": 435
+          "count": 535
         },
         {
           "language": "C#",
-          "count": 309
+          "count": 387
         },
         {
           "language": "CSS",
-          "count": 236
+          "count": 299
         },
         {
           "language": "PHP",
-          "count": 224
+          "count": 256
         },
         {
           "language": "Jupyter Notebook",
-          "count": 128
+          "count": 183
         },
         {
-          "language": "C++",
-          "count": 124
+          "language": "C",
+          "count": 151
         }
       ],
       "province_breakdown": [
         {
           "province": "Other / Unresolved",
-          "count": 562
+          "count": 709
         },
         {
           "province": "Gauteng",
-          "count": 247
+          "count": 318
         },
         {
           "province": "Western Cape",
-          "count": 144
+          "count": 190
         },
         {
           "province": "KwaZulu-Natal",
-          "count": 37
+          "count": 52
         },
         {
           "province": "Eastern Cape",
-          "count": 12
+          "count": 18
         },
         {
           "province": "Free State",
-          "count": 9
+          "count": 12
         },
         {
           "province": "Limpopo",
@@ -295,11 +303,11 @@
         },
         {
           "province": "North West",
-          "count": 3
+          "count": 5
         },
         {
           "province": "Mpumalanga",
-          "count": 2
+          "count": 3
         }
       ],
       "account_age_breakdown": [
@@ -313,11 +321,11 @@
         },
         {
           "range": "6\u201310 years",
-          "count": 163
+          "count": 355
         },
         {
           "range": "10+ years",
-          "count": 562
+          "count": 661
         }
       ]
     }
@@ -325,169 +333,169 @@
   "top_languages": [
     {
       "language": "JavaScript",
-      "count": 2377
+      "count": 3059
     },
     {
       "language": "Python",
-      "count": 1410
+      "count": 1833
     },
     {
       "language": "HTML",
-      "count": 1265
+      "count": 1646
     },
     {
       "language": "TypeScript",
-      "count": 1192
+      "count": 1495
     },
     {
       "language": "Java",
-      "count": 1046
+      "count": 1357
     },
     {
       "language": "C#",
-      "count": 942
+      "count": 1159
     },
     {
       "language": "PHP",
-      "count": 611
+      "count": 712
     },
     {
       "language": "CSS",
-      "count": 495
+      "count": 668
     },
     {
       "language": "C++",
-      "count": 383
+      "count": 469
     },
     {
       "language": "Shell",
-      "count": 358
+      "count": 421
     },
     {
       "language": "Jupyter Notebook",
-      "count": 302
+      "count": 412
     },
     {
       "language": "C",
-      "count": 283
+      "count": 382
     },
     {
       "language": "Go",
-      "count": 232
-    },
-    {
-      "language": "Rust",
-      "count": 182
+      "count": 284
     },
     {
       "language": "Ruby",
-      "count": 181
+      "count": 221
+    },
+    {
+      "language": "Rust",
+      "count": 208
     }
   ],
   "top_female_languages": [
     {
       "language": "JavaScript",
-      "count": 137
+      "count": 218
     },
     {
       "language": "HTML",
-      "count": 97
+      "count": 141
     },
     {
       "language": "Python",
-      "count": 89
+      "count": 108
     },
     {
       "language": "TypeScript",
-      "count": 75
+      "count": 87
     },
     {
       "language": "Java",
-      "count": 51
-    },
-    {
-      "language": "Jupyter Notebook",
-      "count": 38
-    },
-    {
-      "language": "C#",
-      "count": 32
+      "count": 67
     },
     {
       "language": "CSS",
-      "count": 31
+      "count": 61
     },
     {
-      "language": "PHP",
-      "count": 24
+      "language": "Jupyter Notebook",
+      "count": 54
     },
     {
       "language": "C",
-      "count": 21
+      "count": 53
+    },
+    {
+      "language": "C#",
+      "count": 50
+    },
+    {
+      "language": "PHP",
+      "count": 38
     }
   ],
   "province_breakdown": [
     {
       "province": "Other / Unresolved",
-      "count": 1220
+      "count": 1570
     },
     {
       "province": "Gauteng",
-      "count": 529
+      "count": 703
     },
     {
       "province": "Western Cape",
-      "count": 469
+      "count": 615
     },
     {
       "province": "KwaZulu-Natal",
-      "count": 98
+      "count": 126
     },
     {
       "province": "Eastern Cape",
-      "count": 25
+      "count": 38
     },
     {
       "province": "Free State",
-      "count": 12
+      "count": 17
     },
     {
       "province": "Limpopo",
-      "count": 9
-    },
-    {
-      "province": "Mpumalanga",
-      "count": 7
+      "count": 10
     },
     {
       "province": "North West",
-      "count": 5
+      "count": 10
+    },
+    {
+      "province": "Mpumalanga",
+      "count": 9
     },
     {
       "province": "Northern Cape",
-      "count": 1
+      "count": 2
     }
   ],
   "account_age_breakdown": [
     {
       "range": "1\u20133 years",
-      "count": 184
+      "count": 183
     },
     {
       "range": "3\u20136 years",
-      "count": 296
+      "count": 297
     },
     {
       "range": "6\u201310 years",
-      "count": 304
+      "count": 779
     },
     {
       "range": "10+ years",
-      "count": 1591
+      "count": 1841
     }
   ],
   "averages": {
-    "followers": 6.8,
-    "public_repos": 12.7
+    "followers": 5.8,
+    "public_repos": 12.3
   }
 }
